@@ -1,0 +1,12 @@
+from tkinter import *
+root = Tk()
+root.title("Welcome to MyGyan")
+txt = "Be your boss and do whaterver you have to do to acheieve your goal.\nBe awesome,hide your pain in your simle.\n"
+msg = Message(root,text=txt)
+msg.config(padx=72,pady=71,bg='black', fg='green', font=('times',24, 'italic'),bd=5,anchor='se',relief='raised',takefocus='true')
+msg.pack(side="left")
+img=PhotoImage(file='../small.gif')
+pic = Label(root,image=img,bg='black')
+pic.pack(side='right')
+txt="hello world"
+root.mainloop()

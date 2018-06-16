@@ -1,0 +1,15 @@
+def eveOdd(num):
+    if num % 2 :
+        return False
+    else:
+        return True
+
+x = list(range(int(input("Enter starting range - ")),int(input("Enter ending range - "))))
+
+for var in x:
+    if eveOdd(var):
+        print(var,end='  ')
+    else:
+        pass
+
+print("\n\n")

@@ -1,0 +1,13 @@
+class complex:
+    def __init__(self,realpart,imagpart):
+        self.r = realpart
+        self.i = imagepart
+    def __add__(self,obj):
+        return complex(self.r+obj.r,self.i+obj.i)
+    def __str__(self):
+        return self.r,self.i
+
+x = complex(3.0,-4.5)
+print("Complex Number 1st = {}+{}".format(x.r,x.i))
+y = complex(3.0,-4.5)
+print("Complex Number 1st = {}+{}".format(y.r,y.i))

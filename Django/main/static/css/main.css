@@ -1,0 +1,46 @@
+body{
+    background-image: url(bgimage.jpg);
+
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+header{
+    color:crimson;
+}
+ul{
+    margin: 0px;
+    padding: 0px;
+    list-style:none; 
+}
+ul li{
+    float: left;
+    width: 200px;
+    height: 40px;
+    opacity: 1;
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px;
+    text-decoration: none;
+    color:;
+}
+ui li a{
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+ui li a:hover {
+    background-color: green;
+}
+ul li ul li{
+    display: none;
+}
+ul li:hover ul li{
+    display: block;
+}
+footer{
+    clear: both;
+    text-align: center;
+    padding: 20px;
+    color: aqua
+}

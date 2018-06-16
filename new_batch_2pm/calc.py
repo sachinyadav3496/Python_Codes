@@ -1,0 +1,44 @@
+print("Welcome to Calc Program")
+
+val1 = float(input("Enter value of x - "))
+val2 = float(input("Enter value of y - "))
+op = input("Enter operation to perform - (+,-,*,/,**,//,%) ").strip()
+
+
+if op == '+' :
+
+    print("Addition of %.2f and %.2f is = %.2f "%(val1,val2,val1+val2))
+
+elif op == '-' :
+
+    print("Substraction of %.2f and %.2f is =  %.2f"%(varl1,val2,val1-val2))
+
+elif op == '*' :
+
+    print("Multiplication of %.2f and %.2f is = %.2f"%(val1,val2,val1*val2))
+
+elif op == '/' :
+    try:
+        print("Division of %.2f and %.2f is = %.2f"%(val1,val2,val1/val2))
+    except ZeroDivisionError as e :
+        print("Error!!",e)
+        print("Are out of your mind \nNo number can be divided by zero")
+
+
+elif op == '//' :
+
+    print("floor Division of %.2f and %.2f is = %.2f"%(val1,val2,val1//val2))
+
+    
+elif op == '**' :
+
+    print("Power of %.2f and %.2f is = %.2f"%(val1,val2,val1**val2))
+
+elif op == "%" :
+
+    print("Remainder of %.2f/%.2f = %.2f"%(val1,val2,val1%val2))
+
+else :
+
+    print("Error:Wrong Input")
+    

@@ -1,0 +1,11 @@
+import sqlite3 as sql
+db = sql.connect("test.db")
+c = db.cursor()
+c.execute("select * from user")
+print(c.fetchall())
+c.execute("insert into user(name,id,grade) values('sachin yadav',3,'A')")
+c.execute("select * from user")
+print(c.fetchall())
+db.commit()
+c.close()
+db.close()

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body style="background-image:url({{ url_for('static',filename='logo.png') }})">
+<center>
+{% if data %}
+<h1>Welcome Back mr. {{ data }}</h1>
+<a href="/logout"><br/>CLICK HERE TO LOGOUT </a>
+{% else %}
+<form style="background-color: darkslategrey;border: groove;" method="post" action="/login">
+<p style="color: ghostwhite">UserName:<input type="text" name="username"></p>
+<p style="color: ghostwhite">Password:<input type="password" name="passwd"></p>
+<p style="color: ghostwhite"><input type="submit"></p>
+
+</form>
+{% endif %}
+</center>
+
+</body>
+</html>

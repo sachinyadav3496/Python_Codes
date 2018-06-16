@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div>
+<img src="{{ url_for('static',filename='img/my1.jpg') }}" height="100px" width="100px" style="position: relative" />
+</div>
+<ol>
+ {% for key in info %}
+ <li><b>{{ key }}:</b>{{ info[key] }}</li>
+ {% endfor %}
+</ol>
+</body>
+</html>

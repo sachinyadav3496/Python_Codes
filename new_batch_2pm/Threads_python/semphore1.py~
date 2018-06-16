@@ -1,0 +1,28 @@
+import threading as th
+
+x = 0
+
+def change():
+    global x 
+    x += 1
+"""change()
+print(x)
+change()
+print(x)
+
+"""
+def new():
+    global x 
+    x = 0
+    for var in range(1000):
+        change()
+
+one = th.Thread(target=new)
+two = th.Thread(target=new)
+one.start()
+two.start()
+
+one.join()
+two.join()
+
+print("Value of x = ",x) 

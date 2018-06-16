@@ -1,0 +1,12 @@
+import sqlite3 as sql
+db = sql.connect("test.db")
+c = db.cursor()
+c.execute("select * from user")
+print("Data base is - \n\n\t",c.fetchall())
+c.execute("insert into user(name,id,grade) values('hello',4,'c')")
+print("After updation the database is - ")
+c.execute("select * from user")
+print(c.fetchall())
+db.commit()
+c.close()
+db.close()

@@ -1,0 +1,23 @@
+from tkinter import * 
+def login_user():
+    user = name_var.get()
+    passwd = passwd_var.get()
+    print(user)
+    print(passwd)
+    e1.delete(0,END)
+    e2.delete(0,END)
+
+
+root = Tk()
+root.title="PYTHON BANK"
+name_var = StringVar()
+passwd_var = StringVar()
+e1 = Entry(root,textvariable=name_var).grid(row=1,column=1)
+e2 = Entry(root,textvariable=passwd_var).grid(row=2,column=1)
+l1 = Label(root,text='LOGIN PAGE').grid(row=0)
+l2 = Label(root,text='USERNAME : ').grid(row=1)
+l3 = Label(root,text='PASSWORD : ').grid(row=2)
+b = Button(root,text='QUIT',command=root.destroy).grid(row=3)
+b1 = Button(root,text="LOGIN",command=login_user).grid(row=3,column=1)
+
+root.mainloop()

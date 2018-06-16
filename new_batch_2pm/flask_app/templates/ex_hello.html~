@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+	<body>
+		<h1>Hello mr.{% if name %}
+			{{ name }}
+			{% else %}
+			Guest
+			{% endif %}
+		</h1>
+
+		<form action='/login' method='post' >
+		
+			<p>UserName: <input type='text' name='name' > </p>
+			<p>Password: <input type='password', name='passwd'></p>
+			<p><input type='Submit' value='submit'></p>
+		</form>
+
+	</body>
+</html>

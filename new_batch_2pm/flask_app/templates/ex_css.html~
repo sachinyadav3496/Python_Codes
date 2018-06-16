@@ -1,0 +1,23 @@
+<!Doctype html>
+<html lang='en-us'>
+	<head>
+		<meta charset='utf-8'>
+		<link rel='stylesheet' type='text/css' href='{{ url_for("static",filename="ex_css.css")  }}'>
+	</head>
+	<body>
+		<a href='/profile'>Show Me</a>
+		<a href='/hello' >Click Me</a>
+		<h1>This is Red</h1>
+		<h2>This is Yellow</h2>
+		<h3>This is Green</h3>
+		<h4>This is Purple</h4>
+		<h5>This is 333333</h5>
+		<h6>This is ABCDEF</h6>
+		<div class='myclass'>
+		<h1 class='ch1'>This should be #cccccc</h1>
+		<h2 class='ch2'>This should be gray</h2>
+		<h3 class='ch3'>This should be orange</h3>
+		</div>
+		
+	</body>
+</html>

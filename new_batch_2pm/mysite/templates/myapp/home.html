@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Myapp</title>
+</head>
+<body>
+{% include 'myapp/head.html' %}
+{% block head %}
+{% endblock %}
+<p>
+<a href='/myapp/hello'>Hello</a></p>
+<a href="/myapp/bye">Bye</a><br/>
+<a href="/">Home Django</a>
+<h1 style="color:darkblue;"> Welcome to myapp page</h1>
+<h1 style="color:indigo;">Keep Learning</h1>
+{% include 'myapp/footer.html' %}
+{% block footer %}
+{% endblock %}
+</body>
+</html>

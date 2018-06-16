@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Login</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static "css/login.css" %}" >
+    </head>
+    <header class="error">
+
+        {% if error %}
+        <h1 class="error" >User Already Exist !! Please Log IN</h1>
+
+    {% endif %}
+    </header>
+    <body>
+
+
+        <div class="login-page">
+
+
+
+
+            <div class="form">
+                <form class="register-form"  method="post"  action="/signup/">
+                    {% csrf_token %}
+
+                    <input type="text" placeholder="User name" value="{{ name }}" name="name"/>
+                    <input type="password" placeholder="Password" value="{{ password }}" name="password"/>
+                    <input type="email" placeholder="Email id" value="{{ email }}" name="email"/>
+                    <button>Sign up</button>
+                    <p class="message">Already Registered? <a href="#">Login</a></p>    
+                </form>
+                <form class="login-form" action="/adduser/">
+                    <input type="text" placeholder="User name"/>
+                    <input type="password" placeholder="Password"/>
+                    <button>Login</button>
+                    <p class="message">Not Registerd? <a href="#">Register</a></p>
+                </form>
+            </div>
+        </div>
+        <script src={%  static  'js/jquery-3.2.1.min.js' %} ></script>
+        <script>
+            $('.message a').click(function(){
+                $('form').animate({height: "toggle",opacity: "toggle"},"slow");
+            });
+        </script>
+       
+    </body>
+</html>

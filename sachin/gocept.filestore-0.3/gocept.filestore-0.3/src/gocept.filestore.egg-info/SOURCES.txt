@@ -1,0 +1,17 @@
+CHANGES.txt
+bootstrap.py
+buildout.cfg
+setup.py
+src/gocept/__init__.py
+src/gocept.filestore.egg-info/PKG-INFO
+src/gocept.filestore.egg-info/SOURCES.txt
+src/gocept.filestore.egg-info/dependency_links.txt
+src/gocept.filestore.egg-info/namespace_packages.txt
+src/gocept.filestore.egg-info/not-zip-safe
+src/gocept.filestore.egg-info/requires.txt
+src/gocept.filestore.egg-info/top_level.txt
+src/gocept/filestore/README.txt
+src/gocept/filestore/__init__.py
+src/gocept/filestore/filestore.py
+src/gocept/filestore/interfaces.py
+src/gocept/filestore/tests.py

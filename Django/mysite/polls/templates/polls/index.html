@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>my index</title>
+    <style type="text/css">
+    body {
+    background-color: lightblue;
+    }
+    h1 {
+    color : white;
+    text-align: center;
+     }
+    p
+    { font-family:verdana;
+    font-size:20px;
+    }
+        </style>
+</head>
+<body>
+
+{% if latest_question_list %}
+
+<ul>
+    {% for question in latest_question_list %}
+   <!--<li><a href="/polls/{{ question.id }}" /> {{ question.question_text }}</a></li> -->
+        <li><a href="{% url 'detail' question.id %}">{{ question.question_text }}</a></li>
+
+    {% endfor %}
+
+{% else %}
+<p>No polls are available.</p>
+
+{% endif %}
+</ul>
+</body>
+</html>

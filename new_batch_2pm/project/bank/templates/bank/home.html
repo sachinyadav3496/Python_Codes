@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>home</title>
+    {% include 'bank/header.html' %}
+    {% block head %}
+    {% endblock %}
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bank/main.css' %}">
+</head>
+<body>
+<h1 id="main_heading">This is Main Heading of Main Page</h1>
+
+<footer>
+    {% include 'bank/footer.html' %}
+    {% block foot %}
+    {% endblock %}
+</footer>
+</body>
+</html>

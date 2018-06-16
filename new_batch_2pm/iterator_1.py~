@@ -1,0 +1,21 @@
+class myClass:
+    def __init__(self,x):
+        self.data = x
+        self.index = len(x)
+    def __iter__(self):
+        return self
+    def __next__(self):
+        if self.index == 0 :
+            raise StopIteration
+        self.index -= 1
+        return self.data[self.index]
+
+def main():
+
+    obj = myClass("Hello World!")
+    for char in obj:
+        print(char)
+
+if __name__ == "__main__" :
+    
+    main()

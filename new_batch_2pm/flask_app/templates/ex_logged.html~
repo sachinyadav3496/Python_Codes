@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+	<body>
+		<table border='1px'>
+			<th>Name:</th>
+			<td>{{ data[0] }}</td>
+			<br>
+			<th>Acc No:</th>
+			<td>{{ data[1] }}</td>
+			</br>
+			<th>Balance:</th>
+			<td>{{ data[3] }}</td>
+			</br>
+			<th>Email:</th>
+			<td>{{ data[4] }}</td>
+		</table>
+	</body>
+</html>
+

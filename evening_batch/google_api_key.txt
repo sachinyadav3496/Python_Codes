@@ -1,0 +1,7 @@
+https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670,151.1957&radius=500&types=food&name=cruise&key=YOUR_API_KEY
+
+
+
+key = AIzaSyBDB7zeAt8y9d9fykfW3SzPaT2EQUEYl8s
+
+jaipur co ordinate = 26.922070,75.778885

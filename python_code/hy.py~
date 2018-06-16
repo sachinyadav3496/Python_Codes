@@ -1,0 +1,8 @@
+print("hello")
+def print_name():
+    print("Welcome to python world!")
+    print("The count down is here")
+    for i in range(0,11):
+        print(i,"this is the magic no. ")
+        print()
+print("I am enjoying it ")

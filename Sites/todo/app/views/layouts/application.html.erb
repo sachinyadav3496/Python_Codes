@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Getting Things Done with Engine Yard</title>
+
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    <div id="all">
+        <div id="header">
+            <h1><span class="intro">Getting Things Done</span> deployed on <span class="branding">Engine Yard</span></h1>
+            <span class="environment-info"><%= link_to 'Environment Info', environment_path %></span>
+            <p class="sample">Sample Deployment Application</p>
+        </div>
+        <div id="content">
+            <% if alerted = alert %>
+                <p id="alert"><%= alerted %></p>
+            <% end %>
+            <%= yield %>
+        </div>
+		<div id="foot">
+      <div class="logo">
+        <a href="http://www.engineyard.com"><img src="/images/ey-wordmark.png"></a>
+      </div>
+			<div class="copyright">
+			<p>
+			  Running on <a href="http://www.engineyard.com">Engine Yard</a> and <a href="http://www.rubyonrails.org">Rails</a><br>
+			  Ruby is the Language of the Cloud.<br>
+			  Copyright © Engine Yard, Inc. All rights reserved.
+			</p>
+			</div>
+		</div>
+    </div>
+</body>
+</html>

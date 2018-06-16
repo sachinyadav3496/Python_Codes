@@ -1,0 +1,38 @@
+{% block link_block %}
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+{% endblock %}
+
+{% block nav_block %}
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">EveManage</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="{% url 'home' %}">Home</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Services<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="{% url 'wedding' %}">Wedding</a></li>
+          <li><a href="#">Concerts</a></li>
+          <li><a href="#">Birthdays</a></li>
+
+        </ul>
+      </li>
+        <li><a href="{% url 'about' %}">About Us</a></li>
+      <li><a href="{% url 'contact' %}">Contact</a></li>
+      <li><a href="{% url 'login' %}">Login</a></li>
+
+    </ul>
+  </div>
+</nav>
+
+{% endblock %}
+
+
+

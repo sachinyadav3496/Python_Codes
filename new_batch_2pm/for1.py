@@ -1,0 +1,6 @@
+print("\n\n")
+for var in 'Python' :
+    print(var)
+print("\n\n")
+
+

@@ -1,0 +1,23 @@
+
+#main_heading {
+    color:red;
+    font-size: x-large;
+    background-color: greenyellow;
+}
+
+#my_div{
+    float: right;
+    height: 500px;
+    width: 400px;
+    border: groove;
+    border-color: red;
+    padding: 10px;
+}
+
+#myform{
+    height: 300px;
+    width: 300px;
+    border: groove;
+    border-color: black;
+
+}

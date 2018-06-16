@@ -1,0 +1,50 @@
+<!Doctype html>
+<html>
+<head>
+  <title>
+      Hello World Title
+    </title>
+</head>
+<body bgcolor="#808080">
+  <h1> Hello World Django</h1>
+  <a href="{% url 'myindex' %}">Click Me</a>
+
+  <article>
+    Hello World!
+                  This is Djago Powered First Page.
+                  Enjoy Learning Django.
+                  <span> {{my_var}}</span>
+
+                  <span>
+                      {% if years < 10 %}
+                        you are a child
+                      {% elif years < 18 %}
+                         You are a teenager
+
+                      {% else %}
+
+                            You are an adult!
+                      {% endif %}
+
+                  </span>
+        <ul>
+            {% for city in array_city %}
+          <li>
+            {{ city }}
+          </li>
+          {% endfor %}
+        </ul>
+
+        <span>
+        {{ my_hello | lower }}
+      </span>
+
+      <span>
+          {{ my_hello | upper }}
+      </span>
+
+      <span>
+          {{ my_hello | capfirst }}
+      </span>
+  </article>
+</body>

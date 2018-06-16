@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>SignUP</title>
+    {% include 'bank/header.html' %}
+    {% block head %}
+    {% endblock %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'bank/main.css' %}">
+</head>
+<body>
+
+<div id="mydiv">
+    <center>
+    <form id="myform" style="background-color: gray"  method="post" action='/bank/mysignup/'  >
+        <fieldset >
+            <legend>Sign Up</legend>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="SUBMIT!">
+    </fieldset>
+    </form>
+        </center>
+</div>
+{% if error %}
+<h3 style="color:red">{{ error }}</h3>
+{% endif %}
+
+<img src="{% static 'images/image1.jpg' %}" height="150" width="200">
+{% include 'bank/footer.html' %}
+{% block foot %}
+{% endblock %}
+</body>
+</html>

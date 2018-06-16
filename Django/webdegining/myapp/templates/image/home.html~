@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang='en-us'>
+	<head>
+		<title>Hello this is to test images</title>
+		<h1>Hello this is to test images</h1>
+	</head>
+</html>
+<body>
+	<p>Image starts from here</p>
+	<img src='/static/my.jpg'>
+</body>
+<html>

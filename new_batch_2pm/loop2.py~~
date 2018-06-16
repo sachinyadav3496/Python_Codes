@@ -1,0 +1,27 @@
+print("Loop Start's Here ")
+
+i = 1
+j = 2
+
+while i < 21 :
+
+    print(i)
+    print(j)
+
+
+    if i == 17 and  j == 18:
+
+        break
+
+    else :
+
+        pass
+    print()
+    print("IN LOOP")
+    print()
+    
+    i += 2
+    j += 2
+    
+
+print("Loop Ends Here ")

@@ -1,0 +1,9 @@
+<div>
+	<a href="personal" >Personal</a>
+	<br />
+	<a href="blog" >blog</a>
+	<br />
+	<a href="admin">admin</a>
+	<br />
+	<a href="home">home</a>
+</div>

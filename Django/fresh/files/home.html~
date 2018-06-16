@@ -1,0 +1,10 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>music</title>
+		<h1>Welcome to GRRAS Music Site</h1>
+	</head>
+	<body style="background-color:#123456">
+		<h2>This is my music website using Django</h2>
+	</body>
+</html>

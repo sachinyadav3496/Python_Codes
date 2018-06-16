@@ -1,0 +1,13 @@
+from django.shortcuts import render
+
+def index(request):
+
+    return render(request,'event/home.html')
+
+def site(request):
+
+    return render(request,'site/index.html')
+
+def new(request):
+
+    return render(request,'event/new.html')

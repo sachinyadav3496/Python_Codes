@@ -1,0 +1,13 @@
+<!Doctype html>
+<html lang='en-us'>
+	<head>
+		<title>Home Page</title>
+		<link rel="stylesheet" href="{{ url_for('static',filename='my.css' }}" />
+		<h1 style="color:Green">Welcome To Flask Web Page Powerd By Templates</h1>
+	</head>
+	<body>
+		<h2>You can we can make web page</h2>
+		<h3>Directly import them into Flask</h3>
+		<h2><a href='/hello'>Click Me</a></h2>
+	</body>
+</html>

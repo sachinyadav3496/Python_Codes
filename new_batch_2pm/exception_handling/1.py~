@@ -1,0 +1,6 @@
+d = { 'name' : 'hello' }
+key = input("ente a key ")
+try : 
+    print(d[key])
+except KeyError :
+    print("Error!!!",KeyError)

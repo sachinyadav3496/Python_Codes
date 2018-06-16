@@ -1,0 +1,31 @@
+#the following variable would be set as the result of a runtime calculation:
+
+x = input("Do you need the answer ? (y/n): ")
+if x.lower() == 'y' :
+    required = True
+else :
+    required = False
+
+def the_answer(self,*args):
+    return "This is the answer"
+class philosopher1:
+    pass
+if required:
+    philosopher1.the_answer = the_answer
+class philosopher2:
+    pass
+if required:
+    philosopher2.the_answer = the_answer
+class philosopher3:
+    pass
+if required:
+    philosopher3.the_answer = the_answer
+
+plato = philosopher1()
+kant = philosopher2()
+if required:
+    print(kant.the_answer())
+    print(plato.the_answer())
+else:
+    print("The silence of the Philosophers")
+

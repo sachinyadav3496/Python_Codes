@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>info</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'one.css' %}">
+</head>
+<body>
+<h1 id="myid">Thanks for your input <br/> Here is your data</h1>
+{% for key,value in data.items %}
+
+    <h1 style="color: chartreuse">{{ key }} = {{ value }}</h1>
+
+{% endfor %}
+</body>
+</html>
