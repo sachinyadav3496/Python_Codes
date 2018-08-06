@@ -1,0 +1,11 @@
+name	maths	science	physics	percentage
+sachin	78	89	99	72%
+rajat	45	100	100	60%
+sachin	78	89	99
+sachin	78	89	99
+sachin	78	89	99
+sachin	78	89	99
+sachin	78	89	99
+sachin	78	89	99
+
+total	77.36%	89%	99%

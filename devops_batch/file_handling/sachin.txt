@@ -1,0 +1,1 @@
+{"Name": "sachin", "sal": null, "Trainer": true, "Pagal": false, "skills": ["cricketer", "coder"], "edu": {"10-th": {"name": "Rajasthan Board", "grade": "88%"}, "12-th": {"name": "Rajathan Board", "grade": "83%"}, "graduation": {"name": "Rajasthan Technical University", "grade": "75%"}}}
