@@ -1,9 +1,0 @@
-def succ(x): #defining Function
-        return x+1
-successor = succ #creating alice for function
-print(id(succ)) #id will be same
-print(id(successor)) #both of the function actually are one
-print(successor(10)) 
-
-del succ #deleting succ function
-print(successor(10)) #Error because Successor also deleted with succ

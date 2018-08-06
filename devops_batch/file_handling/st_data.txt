@@ -1,5 +1,0 @@
-name	maths	science	physics
-sachin	78	89	99
-rajat	45	100	100
-
-
