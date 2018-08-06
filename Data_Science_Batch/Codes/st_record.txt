@@ -1,0 +1,7 @@
+Index                Name               Maths             Physics           Chemistry          Percentage
+1                john                  78                  98                  78               84.67
+2                hari                  98                  78                  78               84.67
+3                 ram                  69                  67                  87               74.33
+4               shyam                  77                  45                  67               63.00
+5               mohan                  78                  89                  89               85.33
+6             natasha                  76                  78                  78               77.33

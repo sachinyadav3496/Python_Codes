@@ -1,0 +1,4 @@
+user	acc	passwod	bal
+ram	1001	redhat	10000
+shaym	1002	redhat	15000
+sachin	1003	abc@3434	23423434.434

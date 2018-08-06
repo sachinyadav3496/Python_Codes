@@ -1,0 +1,6 @@
+Name	Maths	Science	English
+sachin	78	98	89
+kritika	89	87	78
+rajat	89	67	56
+nidhi	88	77	66
+hello	89	67	88

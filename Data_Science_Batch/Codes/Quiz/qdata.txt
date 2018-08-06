@@ -1,0 +1,1 @@
+[["Who is the father of python ", ["Guido Van Rossum", "Monty Python", "Bill Gates", "You"], "Guido Van Rossum"], ["Which is not a false case in python", ["0", "False", "None", "-12"], "-12"]]
