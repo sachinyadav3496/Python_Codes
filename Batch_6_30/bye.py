@@ -1,9 +1,4 @@
-print("Hello World")
-x = int(input("Enter X : "))
-y = int(input("Enter Y : "))
-z = int(input("Enter Z : "))
-name = input("Enter your name : ")
-print("Welcome to the python , ",name)
+
 x = int(input("Enter X : "))
 y = int(input("Enter Y : "))
 z = int(input("Enter Z : "))
@@ -11,5 +6,3 @@ print("Value of x = ",x)
 print("Value of x = ",y)
 print("Value of z = ",z)
 print("Yeah vim is awesome")
-
-
