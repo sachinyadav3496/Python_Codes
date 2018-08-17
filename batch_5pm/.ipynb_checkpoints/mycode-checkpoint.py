@@ -1,6 +1,0 @@
-print("Hello Wrold")
-x = int(input("Enter x : "))
-y = int(input("Enter y : "))
-#print("Addition of ",x,"and",y,"=",x+y)
-#print("Addition of %d and %d = %d "%(x,y,x+y))
-print("Addition of {2} and {0} = {1} ".format(y,x+y,x))
