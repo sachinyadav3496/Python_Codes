@@ -1,0 +1,4 @@
+from time import sleep
+for var in range(10) : 
+    print(var,end='\t')
+    sleep(1)
