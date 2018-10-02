@@ -1,0 +1,5 @@
+x = readline(prompt="Enter value of x : ")
+y = readline(prompt='Enter value of y : ')
+
+print("X + Y = ")
+print(x+y)
