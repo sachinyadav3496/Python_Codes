@@ -1,6 +1,11 @@
-first of all create a repository on your git hub account
 
-than open powershell and go to your code folder
+Git Cheat Sheeet
+
+
+step1) first of all create a repository on your git hub account
+
+than open powershell and go to your code folder 
+
 
 # git init --> it initlize your current folder  as a git repository
 # vim README.md --> overview or discreption of your repository
@@ -26,3 +31,18 @@ your remote repository ( internet connection required )
 
 #git pull origin master --> It will fetch all the changes that has been
 commited to your directory  
+
+--> if you have an error of unrelated histories than follow this step
+#git pull origin master --allow-unrelated-histories
+#git status --> see which files has conflict issues ( see red files )
+#git add . --> make sure you have reviewed your changes and merged all changes
+#git commit -m "message" --> to acknowledge your changes as well as merges"
+#git push origin master --> origin is remote destination where we want to upload our files and master is your main branch
+
+
+---> if you have large files more than 100MB than you need to configure GIT-LFS account
+
+step1) search for the git lfs download page on google
+step2) download git_lfs.exe program and install it in windows with default permission
+step3) open command shell ( powershell ) and type command git install lfs to tell git to use lfs
+
