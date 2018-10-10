@@ -1,4 +1,4 @@
-s = "Hello World"
-k = "HI world"
-
-print(s+k,sep='\n')
+s = 'hello world'
+k = 'bye world'
+print(s+'
+'+k)
