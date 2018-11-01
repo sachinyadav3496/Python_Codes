@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Get Response from Python</title>
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$.ajax({
+						url:"/",
+						method:"get",
+						success:function(data){
+							//call when ajax called successfully
+							console.log(data);
+						},
+						error:function(){
+							//call when ajax has an error
+							alert("error: something wrong");
+						}
+
+
+				});
+
+
+			});
+		</script>
+	</head>
+
+	<body>
+		<table border="1" id="data">
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+			</tr>
+		</table>
+	<body>
+</html>

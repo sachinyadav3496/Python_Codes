@@ -1,0 +1,6 @@
+print("Hello World welcome to Rprogramming")
+
+#name = readLines(file=stdin,1)
+
+cat("Welcome user ",name, "To the world of R language")
+

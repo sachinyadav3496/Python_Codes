@@ -1,0 +1,33 @@
+<!Dotype html>
+<html lang='en-us'>
+
+<head>
+    <link rel='stylesheet' type='text/css' href='/mysite/css/main.css' >
+
+    <title>
+        MYSITE HOME
+    </title>
+</head>
+
+<body>
+    <img src='/mysite/images/baby.jpeg' height="150" width="150" align='right'>
+    <h1 > HI THis home page for mysite</h1>
+    <p>This is static html file which can directly run on 
+        browser.<br />
+        We will today understand how scripts work specially 
+        cgi-scripts.
+    </p>
+    <a href='/mysite/hello.html'><button>Hello</button></a>
+<center>
+    <form method="POST" action="/cgi-bin/mycgi/login.py">
+        <p>Name&nbsp;&nbsp;&nbsp;&nbsp; : <input type="text" name='username' value='eg. sachin'></p>
+        <p>Password : <input type="password" name='password' > </p>
+         <p>Remember me <input type="checkbox" name='check'></p>
+        <p> <input type="submit"></p>
+    </form>
+</center>
+    <a href='/cgi-bin/mycgi/hello.py'><button>Hello Python</button></a>
+    
+</body>
+
+</html>

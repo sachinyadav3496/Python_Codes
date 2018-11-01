@@ -1,0 +1,15 @@
+h1 { color:darkgray;}
+body { background-color:#123456;}
+p { color: snow;}
+a { color:white;}
+button { 
+    color:white;
+    background-color:#123456;
+    height: 30px;
+    width:120px;
+    }
+form { 
+    border: 10px;
+    align-content: center;
+
+}
