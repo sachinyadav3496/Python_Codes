@@ -1,0 +1,22 @@
+<!Doctype html>
+<html>
+<head>
+<title>HOME</title>
+<link type='text/css' rel='stylesheet' href="{{ url_for('static',filename='css/main.css') }}"
+</head>
+<body>
+
+<img src="{{ url_for('static',filename='images/python.jpeg') }}" height=250 width=250 align='right'>
+<h1 >First Web Page on Flask</h1>
+<h2 >This is Home page for your Dynamic Web Application</h2>
+<p>Hello This is cool it is super easy.
+let's discover more about flask. </p>
+<a href='/hello'><button>Hello</button></a>
+<form method='POST' action='/login'>
+<p> UserName : <input type='text' name='username'> </p>
+<p> Password : <input type='Password' name='password'> </p>
+<p>Remember me ? <input type='checkbox' name='keep_signin'> </p>
+<p> <input type='submit' value='!!LOGIN!!'> </p>
+</form>
+</body>
+</html>
