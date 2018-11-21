@@ -11,8 +11,8 @@ class Address(models.Model):
     pin_code = models.IntegerField()
     def __str__(self):
         addr = self.hno+','+self.street_addr+','+self.city\
-        +','+self.state+', '+self.country 
-        return addr 
+        +','+self.state+', '+self.country
+        return addr
 class Student(models.Model):
     roll_no = models.IntegerField()
     name = models.CharField(max_length=50)

@@ -1,12 +1,24 @@
 <!Doctype html>
+{% load static %}
 <html lang='en-us'>
 <head>
+{% include 'main_css.html' %}
+{% block css_logo %}
 <title>HOME</title>
+{% endblock %}
 </head>
 
 <body>
-<h1 style='color:red'>Welcome to first Django Powered Web page</h1>
-<p style='color:blue'>Django is Cool and Awesome</p>
+  {% block nav %}
+  {%endblock %}
+<p> <b><i>Welcome to first Django Powered Web page.</i></b></p>
+<h1>THIS is Heading1 in red color</h1>
+<h2>This is Heading2 in blue color</h2>
+<h3>This is Heading3 in green color</h3>
+<h4>This is Heading4 in yellow color</h4>
+<h5>This is Heading5 in purple color</h5>
+<h6>This is Heading6 in orange color</h6>
 
+<a href='/student/'>Student</a>
 </body>
 </html>

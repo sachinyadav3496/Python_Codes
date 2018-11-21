@@ -1,0 +1,21 @@
+name	marks	fields
+sachin	80	python
+sachin	80	python
+bharat	90	linux
+nilofar	80	python
+ajay 	80	data science
+vipul	70	maths
+sachin	80	python
+bharat	90	linux
+nilofar	80	python
+ajay 	80	data science
+vipul	70	data science
+bharat	90	linux
+nilofar	80	python
+sachin	80	linux
+bharat	90	python
+nilofar	80	python
+ajay 	80	data science
+vipul	70	maths
+ajay 	80	python
+vipul	70	linux

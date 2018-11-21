@@ -2,13 +2,21 @@
 <!Doctype html>
 <html lang='en-us'>
 <head>
-<title>HOME</title>
+
+  {% include 'main_css.html' %}
+  {% block css_logo %}
+  <title>STUDENT</title>
+  {% endblock %}
+
 </head>
 
 <body>
+  {% block nav %}
+  {% endblock %}
 <h1 style='color:red'>Welcome to Student Application on Django Powered Web page</h1>
 <p style='color:blue'>This is first application of django project grras</p>
 <p style='color:blue'>Application name student</p>
+<a href='/'>HOME</a>
 
 </body>
 </html>

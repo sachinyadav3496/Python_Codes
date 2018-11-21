@@ -1,0 +1,21 @@
+body { background-color:pink;}
+h1 { color:red; }
+h2 { color:blue; }
+h3 { color:green; }
+h4 { color:yellow; }
+h5 { color:purple; }
+h6 { color:orange; }
+
+p { color:white; }
+
+a { color:white; }
+
+button { color:white;
+        background-color: #123456; }
+
+
+#table { border: 2px solid #123456; }
+
+
+td { border: 2px solid #123456;
+     color:black;}
