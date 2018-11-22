@@ -1,0 +1,10 @@
+{% block nav %}
+<table>
+  <tr>
+    <td> <a href='/'><button id='top_left' >HOME</button></a></td>
+    <td> <a href='/student/'><button id='top_left'>STUDENT</button></a></td>
+    <td> <a href='/contact'><button id='top_left' >CONTACT</button></a></td>
+
+  </tr>
+</table>
+{% endblock %}  

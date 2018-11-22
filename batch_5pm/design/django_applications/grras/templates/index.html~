@@ -10,7 +10,7 @@
 
 <body>
 
-<nav class='header_nav'>
+<nav class='head_nav'>
  {% include 'student/top_nav.html' %}
   {% block nav %}
   {% endblock %}

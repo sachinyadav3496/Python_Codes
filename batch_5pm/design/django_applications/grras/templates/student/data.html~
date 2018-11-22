@@ -11,7 +11,7 @@
  {% include 'student/top_nav.html' %}
 {% block nav %}
 {% endblock %}
-</nav>
+</div>
 
 
 <h1>HI welcome to student data

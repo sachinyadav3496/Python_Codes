@@ -19,5 +19,4 @@ def data(request,name=None):
         except Exception as e : 
             error = f"Error : {e} "
             return HttpResponse(error)
-def contact(request):
-    return render(request,'student/contact.html')
+     

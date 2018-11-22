@@ -25,7 +25,7 @@ footer { position: absolute;
 #footer { color:blueviolet;
                   }
 
-.header_nav { background-color: #777777;
+.header_nav { background-color: #aaaaaa;
               float: right; 
 	      padding: 5px 10px 5px 15px;
       }
@@ -33,5 +33,5 @@ footer { position: absolute;
 	    }
 .header_nav td { border:0px; padding:0px 0px 0px; }
 .header_nav button { border:0px; 
-                      background-color: #777777; } 
+                      background-color: #aaaaaa; } 
 #top_left { padding: 0px 5px 0px 0px; } 

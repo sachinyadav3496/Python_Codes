@@ -17,9 +17,9 @@
   {% endblock %}
 </nav>
  </header>
-<h1 style='color:red'>Welcome to Student Application on Django Powered Web page</h1>
-<p style='color:blue'>This is first application of django project grras</p>
-<p style='color:blue'>Application name student</p>
+ <h1>We Are Grras Solutions PVT. LTD.</h1>
+<p style='color:blue'>Email Us at : admin@grras.com </p>
+<p style='color:blue'>Contact Number : 1234567890 </p>
 <a href='/'>HOME</a>
 
 <div id='footer'>
