@@ -78,8 +78,12 @@ WSGI_APPLICATION = 'grras.wsgi.application'
 import pymysql as sql
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3' ,
-        'NAME': 'db.sqlite3'
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'grras',
+        'USER' : 'grras',
+        'PASSWORD' : 'redhat',
+        'HOST' : 'localhost',
+        'PORT' : 3306,
     }
 }
 

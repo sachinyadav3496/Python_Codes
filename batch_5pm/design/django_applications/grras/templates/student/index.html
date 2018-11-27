@@ -20,7 +20,16 @@
 <h1 style='color:red'>Welcome to Student Application on Django Powered Web page</h1>
 <p style='color:blue'>This is first application of django project grras</p>
 <p style='color:blue'>Application name student</p>
-<a href='/'>HOME</a>
+
+
+<div class="form">
+    <form method="post" action='{% url "student_login" %}' >
+        {% csrf_token %}
+        {{ form.as_p }}
+        <p><input type="submit" value="LOGIN"></p>
+    </form>
+</div>
+
 
 <div id='footer'>
  {% include 'student/footer.html' %}
