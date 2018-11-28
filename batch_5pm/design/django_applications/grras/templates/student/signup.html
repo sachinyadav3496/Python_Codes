@@ -25,7 +25,8 @@
 <div class="form">
     <form method="post" action='{% url "student_make_signup" %}' >
         {% csrf_token %}
-        {{ form.as_p }}
+        <p style="color:red"><strong>{{ form.non_field_errors }}</strong> </p>
+        {{ form.as_ul }}
         <p><input type="submit" value="LOGIN"></p>
         <p><a href="{% url 'student_signup' %}">Want to signup?</a></p>
     </form>

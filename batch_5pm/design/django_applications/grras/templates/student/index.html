@@ -23,11 +23,12 @@
 
 
 <div class="form">
-    <form method="post" action='{% url "student_login" %}' >
+    <form method="post" action='{% url "student_login" %}' class="form_login" >
         {% csrf_token %}
-        {{ form.as_p }}
-        <p><input type="submit" value="LOGIN"></p>
-        <p><a href="{% url 'student_signup' %}">Want to signup?</a></p>
+        <p>{{ form.roll_no.label }}  : &nbsp;{{ form.roll_no }}</p>
+        <p>{{ form.password.label }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp; {{ form.password }}</p>
+        <p><input type="submit" value="LOGIN"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{% url 'student_signup' %}">Want to signup?</a></p>
     </form>
 </div>
 

@@ -35,3 +35,13 @@ footer { position: absolute;
 .header_nav button { border:0px; 
                       background-color: #777777; } 
 #top_left { padding: 0px 5px 0px 0px; } 
+
+
+.form_login { padding:30px 100px 30px 100px;
+        border:1px solid white;
+        width:300px;
+}
+
+.form_login input[type=submit] { background-color:#333333; color:white; padding:0px 20px 0px 20px; float:right;}
+
+.form div {  margin: auto; }
