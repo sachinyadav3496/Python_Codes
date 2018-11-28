@@ -23,7 +23,7 @@
 
 
 <div class="form">
-    <form method="post" action='{% url "student_login" %}' >
+    <form method="post" action='{% url "student_make_signup" %}' >
         {% csrf_token %}
         {{ form.as_p }}
         <p><input type="submit" value="LOGIN"></p>

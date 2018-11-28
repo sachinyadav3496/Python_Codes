@@ -1,18 +1,40 @@
 from django.shortcuts import render
 from .models import Student,Address,Faculty,Course
 from django.http import HttpResponse
-from .forms import Login_Form
+from .forms import Login_Form,Signup_Form
 
 def index(request):
     form = Login_Form()
     return render(request,'student/index.html',{'form':form,})
 
-def make_Login(request,method=['POST','GET']):
-    return HttpResponse("You are at login page.")
+def make_Login(request):
+    form = Login_Form(request.POST)
+    if form.is_valid() :
+        roll_no = form.cleaned_data['roll_no']
+        password = form.cleaned_data['password']
+        try :
+            student = Student.objects.get(roll_no=roll_no)
+            if student.password == password :
+                data = { 'NAME':student.name,
+                          'PASSWORD': student.password,
+                           'PHONE NUMBER' : student.ph_no,
+                            'DATE OF BIRTH':student.dob,
+                         }
+                return render(request,'student/data.html',{'data':data})
+            else :
+                return HttpResponse(f"<h1>Invalid Password for user {student.name}")
+        except Exception as error:
+            return HttpResponse(f"<strong>!!Error!!NO such student Exists, {error}</strong><br/>")
+    else :
+        return HttpResponse("!!Error!!Form data is Incorrect")
 
 
+def Signup(request):
+    form = Signup_Form()
+    return render(request,'student/signup.html',{'form':form})
 
-
+def make_Signup(request):
+    return HttpResponse("You are at signup process")
 
 
 
