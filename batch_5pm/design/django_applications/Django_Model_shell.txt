@@ -1,0 +1,71 @@
+----> open your project shell 
+
+python manage.py shell 
+
+----> import your models
+
+from myapp.models import Model1,Model2
+
+----> to count objects in your model fire this comand
+
+Model1.objects.count()
+
+----> to get all object in your model
+
+data = Model1.objects.all()
+
+for d in data :
+         di = d.__dict__
+         for key,value in di.items() :
+             print(f"{key}={value}")
+         print("\n\n")
+    
+
+----> to get a specific record 
+
+ob1 = Model1.objects.get(key=value) #here key is a unique field like primary key in your model 
+
+
+ob1.key1 #accessing the key1 attribute of ob1
+
+ob1.key2 #accessing the key2 attribute of ob1
+
+ob1.key1 = 'some value' #changing attribute key1 of ob1
+
+ob1.save() #saving changes into database 
+
+----> there more ways to do it 
+
+ob = Model1.objects.get(field__startswith='sac')
+
+ob = Model1.objects.get(key1__endswith='it')
+
+----> creating a new model 
+
+from django.utils import timezone
+
+new_obj = Model1(key1='value1',key2='value2')
+new_obj.key3 = timezone.now()
+
+----> to save this model use 
+
+new_obj.save()
+
+----> there is an another way to create object 
+
+
+new_obj = Model1.objects.create(key1='value1',key2='value2')
+new_obj.key3='value3'
+new_obj.save()
+
+-----> we can acess objects also with filter
+Entry.objects.get(headline__contains='Lennon')
+---->Starts-with and ends-with search, respectively. 
+---->There are also case-insensitive versions called istartswith and iendswith.
+ob = Model1.objects.filter(key1__startswith='value')
+
+
+try :
+     ob = Student.objects.get(name='ali baba 40 chor')
+except Student.DoesNotExist as e :
+     print("Error!!",e)

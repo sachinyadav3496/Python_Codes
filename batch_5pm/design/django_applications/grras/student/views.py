@@ -13,18 +13,18 @@ def make_Login(request):
         roll_no = form.cleaned_data['roll_no']
         password = form.cleaned_data['password']
         try :
-            student = Student.objects.get(roll_no=roll_no)
-            if student.password == password :
-                data = { 'NAME':student.name,
+            student = Student.objects.get(roll_no=roll_no,password=password)
+            data = { 'NAME':student.name,
                           'PASSWORD': student.password,
                            'PHONE NUMBER' : student.ph_no,
                             'DATE OF BIRTH':student.dob,
                          }
-                return render(request,'student/data.html',{'data':data})
-            else :
-                return HttpResponse(f"<h1>Invalid Password for user {student.name}")
+            return render(request,'student/data.html',{'data':data})
+
         except Exception as error:
-            return HttpResponse(f"<strong>!!Error!!NO such student Exists, {error}</strong><br/>")
+            form = Login_Form
+            error = "Either Username or Password Invalid"
+            return render(request,'student/index.html',{'form':form,'error':error})
     else :
         return HttpResponse("!!Error!!Form data is Incorrect")
 
@@ -34,7 +34,24 @@ def Signup(request):
     return render(request,'student/signup.html',{'form':form})
 
 def make_Signup(request):
-    return HttpResponse("You are at signup process")
+    form = Signup_Form(request.POST)
+    if form.is_valid():
+        data = {
+        'roll_no' : form.cleaned_data['roll_no'],
+        'name' : form.cleaned_data['name'],
+        'password' : form.cleaned_data['password'],
+        'ph_no'  : form.cleaned_data['ph_no'],
+        'dob' : form.cleaned_data['dob'],
+         }
+        user = Student(**data)
+        user.save()
+        form = Login_Form()
+        return  render(request,'student/index.html',{'form':form,'error':'User Successfully Created Please Login'})
+
+    else :
+        form = Signup_Form()
+        error = "Invalid Form Format"
+        return render(request,'student/signup.html',{'form':form,'error':error})
 
 
 

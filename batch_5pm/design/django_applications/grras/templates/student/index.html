@@ -23,6 +23,9 @@
 
 
 <div class="form">
+    {% if error %}
+    <p style="color:red"><strong>{{ error }}</strong></p>
+    {% endif %}
     <form method="post" action='{% url "student_login" %}' class="form_login" >
         {% csrf_token %}
         <p>{{ form.roll_no.label }}  : &nbsp;{{ form.roll_no }}</p>

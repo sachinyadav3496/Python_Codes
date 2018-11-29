@@ -1,0 +1,141 @@
+---->start a project 
+
+---->open powershell window and go to your project folder by cd project_folder
+
+#python -m pip install django
+
+---->if you want to upgrade your old django new version of django
+
+#python -m pip install --upgrade django 
+
+----> for database connectivity 
+
+#python -m pip install  mysqlclient  
+
+----> now start your project folder 
+
+#django-admin startproject project_name 
+
+----> by this command a folder named as project_name will be created in which we following files
+
+----> project_name 
+				|----> manage.py
+				|---->project_name 
+								|----> urls.py ----> controller where your request comes first 
+								|----> settings.py ----> default settings of your project 
+								|----> wsgi.py ----> for production deployment
+								|----> __init__.py ---> just make this app a package
+
+----> in setting change following
+
+---->  to connect mysql database with django 
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'grras',
+        'USER' : 'grras',
+        'PASSWORD' : 'redhat',
+        'HOST' : 'localhost',
+        'PORT' : 3306,
+    }
+}
+
+----> for static files like css,images or js files 
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [ os.path.join(BASE_DIR,'static'), ]
+
+----> for static templates 
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR,'templates'),], #add template of your project root
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+
+----> create two folders named as templates and static so your project folder looks like  
+
+----> project_name 
+				|----> manage.py
+				|----> project_name 
+								|----> urls.py  
+								|----> settings.py  
+								|----> wsgi.py 
+								|----> __init__.py 
+				|----> templates
+				|----> static  
+				
+----> Django works on apps so let's create an app called myapp
+----> make sure you are in your project folder 
+
+python manage.py startapp myapp
+
+----> project folder will look like 
+
+----> project_name 
+				|----> manage.py
+				|----> project_name 
+								|----> urls.py  
+								|----> settings.py  
+								|----> wsgi.py 
+								|----> __init__.py 
+				|----> templates
+				|----> static  
+				|----> myapp
+							|----> apps.py
+							|----> views.py
+							|----> models.py
+							|----> admin.py
+							|----> __init__.py
+
+							
+----> now create directories in your template and static folder with name myapp and 
+----> in project_name/myapp create two python file urls.py and forms.py 
+
+----> after creating files your project should look like this 
+
+----> project_name 
+				|----> manage.py
+				|----> project_name 
+								|----> urls.py  
+								|----> settings.py  
+								|----> wsgi.py 
+								|----> __init__.py 
+				|----> templates
+								|----> myapp 
+				|----> static  
+							|----> myapp	
+										|----> css
+										|----> js
+										|----> images
+										|----> videos
+										|----> files 
+				|----> myapp
+							|----> apps.py
+							|----> views.py
+							|----> models.py
+							|----> admin.py
+							|----> __init__.py
+							|----> urls.py 
+							|----> forms.py
+
+----> now lets run your project 
+
+python manage.py runserver localhost:80
+
+----> open your browser and type localhost 
+
+----> so this is your default django page 
+
+							

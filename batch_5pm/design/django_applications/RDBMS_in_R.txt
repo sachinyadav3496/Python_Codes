@@ -1,0 +1,121 @@
+----> RDBMS using R 
+
+----> first of all we need a package called RMYSQL to be installed in R so open your RSTUDIO and type command
+
+#install.packages("RMySQL")
+
+----> Load Package in current session 
+
+#library(RMySQL)
+
+----> create a R con object to DBMS
+
+#con<-dbConnect(MySQL(),host='localhost',port=3306,user='student',password='student',dbname='student')
+
+----> Let's see summary of your connection 
+
+#summary(con)
+
+----> full infromation about your connection to database use this command 
+
+#dbGetInfo(con)
+
+----> to list or show tables in database use this command 
+
+#dbListTables(con)
+
+----> to describe a table or to see fields of a table use this command 
+
+#dbListFields(con,'student')
+
+----> database database equilent to R data types 
+
+#dbDataType(RMySQL::MySQL(),'a')
+
+#dbDataType(RMySQL::MySQL(),1:5)
+
+#dbDataType(RMySQL::MySQL(),1.5)
+
+----> Reading data from a table 
+
+#dbReadTable(con,'fees')
+
+----> Executing the query of sql using R command is 
+
+#dbGetQuery(con,"SELECT * FROM student LIMIT 5;") 
+
+----> this will give result directly 
+
+----> alternate method is dbSendQuery and dbFetch
+
+#query <- dbSendQuery(con,'SELECT student.name,student.ph_no,fees.due FROM fees INNER JOIN student ON student.sid = fees.sid;')
+
+#data <- dbFetch(query)
+
+----> Getting infromation about your query 
+
+#dbGetInfo(query)
+
+----> Get Statement from query 
+
+#dbGetStatement(query)
+ 
+----> query to print no of rows fetch by query 
+
+#dbGetRowCount(query)
+
+----> to see how many rows are affected of manipluted during running query 
+
+#dbGetRowsAffected(query)
+
+----> to know about columns fire this command  
+
+#dbColumnInfo(query)
+
+----> to free your query resources type in this command 
+
+#dbClearResult(query)
+
+----> Export or Write DATA into DATABASE using R
+---->dbWriteTable() is used to create, update or append data into a databae table 
+---->it takes sql con name, table to be created, name of dataframe to be exported
+
+----> first create a data frame table 
+
+#d = data.frame(id=1:5,name=c('ram','shyam','manish','hari','aditya'))
+
+----> now write it into database 
+
+#dbWriteTable(con,'new_table',d)
+
+----> change your data frame 
+
+#d = data.frame(id=1:7,name=c('punit','ram','shyam','manish','hari','aditya','yogi'))
+
+----> now overwrite old table 
+
+----> overwrite your table using this syntax 
+
+#dbWriteTable(con,'new_table',d,overwrite=TRUE)
+
+----> creat a new data frame 
+
+#d1 = data.frame(id=8:10,name=c('python','java','c++'))
+
+----> append data to existing table 
+
+#dbWriteTable(con,'new_table',d,append=TRUE)
+
+----> to delete table from database 
+
+#dbRemoveTable(con,'new_table')
+
+----> list tables 
+
+#dbListTables(con)
+
+
+----> to disconnect the database 
+
+
+#dbDisconnect(con)
