@@ -10,8 +10,6 @@ plot1 = fig.add_subplot(1,1,1)
 
 data = [ randint(1,100) for var in range(30)]
 x = [ var for var in range(30)]
-print(data)
-print(x)
 def animate(i):
     global data,x
     data.append(randint(1,100))
