@@ -1,0 +1,16 @@
+<xml version=1.0>
+	<movie>
+		<name>Bahubali</name>
+		<year>2017</year>
+		<lead_actor>prabhas</lead_actor>
+		<lead_actress>tamanna bhatiya</lead_actress>
+	</movie>
+	<movie>
+		<name>Robot2.0</name>
+		<year>2018</year>
+		<actor>Rajinkant</actor>
+		<villian>Akshay kumar</villian>
+		<actress>Ami jackon</actress>
+		<ratings>2.0</rating>
+	</movie>
+
