@@ -1,0 +1,40 @@
+PFB installation & code link for Oozie Project discussed yesterday.
+
+1) Sqoop Installation on EC2 :  http://sqoop.praveendeshmane.co.in/sqoop/sqoop-1-4-6-installation-on-ubuntu-14-04.jsp
+2) Ooozie Installation on EC2 : https://acadgild.com/blog/beginners-guide-for-oozie-installation
+3) Oozie Workflow Project : http://hadooped.blogspot.com/2013/06/apache-oozie-part-4-oozie-workflow-with.html GitHub Link :  https://github.com/airawat/OozieSamples (All Oozie projects discussed yesterday.) 
+
+Add below lines in core-site.xml (Add below line in Hadoop Files)
+
+<property>
+ <name>hadoop.proxyuser.hduser.hosts</name>
+ <value>*</value>
+ </property>
+ <property>
+ <name>hadoop.proxyuser.hduser.groups</name>
+ <value>*</value>
+ </property>
+ <property>
+ <name>hadoop.proxyuser.hue.hosts</name>
+ <value>*</value>
+ </property>
+ <property>
+ <name>hadoop.proxyuser.hue.groups</name>
+ <value>*</value>
+ </property>
+ <property>
+ <name>hadoop.proxyuser.oozie.hosts</name>
+ <value>*</value>
+ </property>
+<property>
+ <name>hadoop.proxyuser.oozie.groups</name>
+ <value>*</value>
+ </property>
+
+hdfs-site.xml
+
+<property>
+ <name>dfs.webhdfs.enabled</name>
+ <value>true</value>
+</property>
+

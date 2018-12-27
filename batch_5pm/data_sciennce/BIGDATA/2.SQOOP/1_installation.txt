@@ -1,0 +1,2 @@
+1. https://linoxide.com/tools/install-apache-sqoop-ubuntu-16-04/
+2. http://sqoop.praveendeshmane.co.in/sqoop/sqoop-1-4-6-installation-on-ubuntu-14-04.jsp

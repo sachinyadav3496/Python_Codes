@@ -1,0 +1,41 @@
+NetFlix OSS + Spring Cloud NetFlix:
+a) https://dzone.com/articles/example-of-using-netflix-oss-spring-cloud-netflix
+b) https://dzone.com/articles/example-of-using-netflix-oss-spring-cloud-netflix 
+>>>(Netflix was the first adopt microservices architecture).They open source all components to make Netflix a leader in Internet Television)
+>>>Spring,as always and to keep with the crowd, made Spring Cloud Netflix ,to make it easy for SpringBoot projects to intergrate with Netflix OSS
+
+image.png
+
+Spring Microservices project : https://start.spring.io/
+
+https://www.optisolbusiness.com/insight/micro-services-architecture-spring-boot-and-netflix-infrastructure (Netflix Architecture)>>>>>Nice Explanation
+
+
+image.png
+
+Link Above Image : https://www.packtpub.com/mapt/book/application_development/9781787285835/5/ch05lvl1sec29/an-overview-of-microservice-architecture-using-netflix-oss
+
+
+
+Deploy a Spring Boot MicroService with Netflix OSS stack in Docker Container
+(https://crunchytechbytz.wordpress.com/2018/02/26/deploy-a-spring-boot-microservice-with-netflix-oss-stack-in-docker-container/)
+
+Microservices PDF : https://optisolcdn-wpengine.netdna-ssl.com/Micro-Services-Architecture-Spring-Boot-and-Netflix-Infrastructure.pdf
+Spring Cloud Netflix Projects:
+1) https://dzone.com/articles/microservices-with-netflix-oss-apache-kafka-and-do-1 (Github Link: https://github.com/srast3/spring-kafka-microservice)
+2) https://medium.com/@tharanganilupul/microservices-implementation-netflix-stack-ba4f4a57a79f (https://github.com/quebic-source/microservices-sample-project)
+3) https://exampledriven.wordpress.com/2016/07/01/spring-cloud-eureka-ribbon-feign-example/ (https://github.com/ExampleDriven/spring-cloud-eureka-example)
+4) https://howtodoinjava.com/spring-cloud/spring-cloud-service-discovery-netflix-eureka/
+5) http://www.javainuse.com/spring/spring_ribbon
+We will be using two features of Hystrix-
+
+Fallback method
+
+Circuit Breaker
+
+6) We can register our Microservices on others service instances:> Eureka> Consul> Cloud Foundry> AWS ECS(Elasticsearch Container services)> Other Alternates....
+7)  
+
+Deploying Spring Boot Apps to AWS with Netflix Nebula and Spinnaker
+(https://programmaticponderings.com/2018/05/12/deploying-spring-boot-apps-to-aws-with-netflix-nebula-and-spinnaker-part-2-of-2/)
+8) Deploying Spring Microservices to AWS ECS (Container Service)(https://aws.amazon.com/blogs/compute/deploying-java-microservices-on-amazon-ec2-container-service/)

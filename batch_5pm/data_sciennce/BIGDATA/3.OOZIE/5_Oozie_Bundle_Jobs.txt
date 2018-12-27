@@ -1,0 +1,6 @@
+
+1) https://gist.github.com/airawat/6010341\
+2) Ooozie Bundle Jobs : http://hadooped.blogspot.com/2013/07/apache-oozie-part-10-bundle-jobs.html
+3) https://hadoopjournal.wordpress.com/2015/12/15/call-oozie-workflow-from-shell-script/ 
+
+(Call Oozie workflow from shell script)

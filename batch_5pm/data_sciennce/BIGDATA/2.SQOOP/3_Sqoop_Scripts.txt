@@ -1,0 +1,14 @@
+Please find attached "Sqoop Script".
+In attached script we have covered following topic mention below:-
+a) Sqoop - import
+b) Sqoop Import all tables
+c) Sqoop Export
+d) Sqoop Incremental append
+e) Sqoop Incremental last modified
+f) Sqoop Job
+g) Sqoop Boundary Query
+h) Sqoop split by
+i) Sqoop codegen &
+j) Sqoop Eval
+
+Sqoop

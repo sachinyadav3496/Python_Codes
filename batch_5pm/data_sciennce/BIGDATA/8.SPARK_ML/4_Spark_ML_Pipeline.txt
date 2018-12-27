@@ -1,0 +1,26 @@
+SPARK ML(Machine Pipelines) Using STANDARD DATATYPES (1.2.1)
+
+
+1) Main Concepts
+
+ML Dataset ML Algorithms
+
+Transformers
+
+Estimators 
+
+Properties of ML Algorithms
+
+ML Pipeline
+
+How it works
+
+Details    
+
+ML Parameters
+
+2) Code Examples
+
+Example : Estimator,Transfomer and Param Example : Pipeline Example : Model Selection via Cross-Validation
+
+3) Dependencies

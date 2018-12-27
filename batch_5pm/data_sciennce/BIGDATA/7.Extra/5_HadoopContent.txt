@@ -1,0 +1,18 @@
+1) MapReduce
+
+2) Sqoop
+
+3) FLUME
+
+5) Pig
+
+6) Hive & Thrift
+
+7) Oozie
+
+8) Impala & Zookeper(Overview)
+
+9) Apache HCatalog
+
+10) Apache WebHDFS
+

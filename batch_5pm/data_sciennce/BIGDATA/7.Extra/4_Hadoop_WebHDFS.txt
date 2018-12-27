@@ -1,0 +1,7 @@
+Apache WebHDFS:
+
+1) https://dzone.com/articles/hadoop-rest-api-webhdfs 
+
+​
+
+2) http://hadoop.apache.org/docs/r1.0.4/webhdfs.html (WebHDFS REST API)

@@ -1,0 +1,171 @@
+    1  exit
+    2  ssh localhost
+    3  exit
+    4  ssh-keygen -t rsa -P ""
+    5  cd 
+    6  cp -a .ssh/id_rsa.pub .ssh/authorized_keys
+    7  cd .ssh/
+    8  ls
+    9  cd ..
+   10  ssh localhost
+   11  ls
+   12  cd /root/Down
+   13  cd /root/Downloads
+   14  sudo cd /root/Downloads
+   15  ls
+   16  cd /root/Downloads
+   17  sudo cd /root/Downloads
+   18  pwd
+   19  exit
+   20  sudo mkdir -p /app/hadoop/tmp
+   21  sudo chown hduser:hduser -R /usr/local/hadoop
+   22  cd $HADOOP_INSTALL
+   23  ls
+   24  cd etc/
+   25  cd hadoop/
+   26  vim core-site.xml 
+   27  cp mapred-site.xml.template mapred-site.xml
+   28  vim mapred-site.xml
+   29  vim hdfs-site.xml 
+   30  sudo mkdir -p /usr/local/hadoop_store/hdfs/namenode
+   31  sudo mkdir -p /usr/local/hadoop_store/hdfs/datanode
+   32  sudo chown -R hduser:hduser /usr/local/hadoop_store
+   33  vim hdfs-site.xml 
+   34  exec bash
+   35  cd
+   36  hadoop namenode -format
+   37  cd $HADOOP_INSTALL
+   38  cd sbin/
+   39  ls
+   40  ./start-all.
+   41  ./start-all.sh
+   42  jps
+   43  init 0
+   44  exit
+   45  chown hduser:hduser -R /usr/local/hadoop
+   46  ssh-keygen 
+   47  cd /home/hduser/.ssh/
+   48  rm authorized_keys 
+   49  ls
+   50  cp id_rsa.pub autorized_keys
+   51  cd
+   52  ssh hduser@localhost
+   53  ls
+   54  ssh localhost
+   55  cd /home/hduser/.ssh/
+   56  ls
+   57  mv autorized_keys authorized_keys
+   58  ssh localhost
+   59  ssh hduser@localhost
+   60  cd
+   61  cd $HADOOP_INSTALL/sbin
+   62  ls
+   63  pwd
+   64  cd $HADOOP_INSTALL/etc
+   65  ls
+   66  cd hadoop/
+   67  ls
+   68  pwd
+   69  ls
+   70  vim hadoop-env.sh 
+   71  sudo rm -rf /app/
+   72  jps
+   73  sudo mkdir -p /app/hadoop/tmp
+   74  sudo chown hduser:hadoop /app/hadoop/tmp
+   75  sudo chown hduser:hduser /app/hadoop/tmp
+   76  vim core-site.xml 
+   77  rm mapred-site.xml
+   78  cp mapred-site.xml.template mapred-site.xml
+   79  vim mapred-site.xml
+   80  rm -rf /usr/local/hadoop_store
+   81  sudo rm -rf /usr/local/hadoop_store
+   82  sudo mkdir /usr/local/hadoop_store/hdfs/namenode
+   83  sudo mkdir -p /usr/local/hadoop_store/hdfs/namenode
+   84  sudo mkdir -p /usr/local/hadoop_store/hdfs/datanode
+   85  sudo chown hduser:hduser -R /usr/local/hadoop_store/
+   86  vim hdfs-site.xml 
+   87  hadoop namenode -format
+   88  ls /usr/local/hadoop_store/hdfs/namenode/
+   89  ls /usr/local/hadoop_store/hdfs/datanode/
+   90  cd $HADOOP_INSTALL
+   91  ls
+   92  cd sbin/
+   93  pwd
+   94  ls
+   95  ./start-all.sh 
+   96  jps
+   97  cd
+   98  cd /usr/local/hadoop_store/hdfs/datanode/
+   99  ls
+  100  cd current/
+  101  ls
+  102  cd ..
+  103  cd
+  104  hadoop fs -ls /
+  105  hadoop fs -ls /user
+  106  hdfs dfs -mkdir /user
+  107  hdfs dfs -mkdir /user/hduser
+  108  hdfs dfs -ls /user
+  109  vim hello.txt
+  110  pwd
+  111  ls
+  112  hdfs dfs -put hello.txt /user/hduser
+  113  rm hello.txt 
+  114  cd /usr/local/hadoop_store/
+  115  ls
+  116  cd hdfs/
+  117  ls
+  118  cd datanode/
+  119  ls
+  120  cd current/
+  121  ls
+  122  cd BP-351909466-127.0.0.1-1545831756208/
+  123  ls
+  124  cd current/
+  125  ls
+  126  cd finalized/
+  127  ls
+  128  cd subdir0/
+  129  ls
+  130  cd du
+  131  cd subdir0/
+  132  ls
+  133  vim blk_1073741825
+  134  ls
+  135  vim blk_1073741825_1001.meta 
+  136  cd
+  137  ls
+  138  hdfs dfs -get /user/hduser/hello.txt
+  139  ls
+  140  cat hello.txt 
+  141  hdfs dfs -cat /user/hduser/hello.txt
+  142  hdfs dfs -CopyFromLocal /etc/bashrc /user/hduser
+  143  hdfs dfs -CopyfromLocal /etc/bashrc /user/hduser
+  144  hdfs dfs -copyFromLocal /etc/bashrc /user/hduser
+  145  hdfs dfs -cat /user/hduser/bashrc
+  146  hdfs dfs -copyToLocal /mnt /user/hduser/bashrc
+  147  hdfs dfs -copyToLocal /user/hduser/bashrc /mnt
+  148  cd /mnt/
+  149  ls
+  150  sudo hdfs dfs -copyToLocal /user/hduser/bashrc /mnt
+  151  hdfs dfs -copyToLocal /user/hduser/bashrc /home/hduser/
+  152  ls
+  153  cd /home/hduser/
+  154  ls
+  155  history 
+  156  history > hadoop_installation.txt
+  157  cd /usr/local/
+  158  ls
+  159  cd /root/Down
+  160  sudo /root/Downloads
+  161  ls
+  162  cd /root
+  163  su -
+  164  history
+  165  history > Hadoop.txt
+  166  ls
+  167  cp hadoop_installation.txt  Hadoop.txt /run/media/hduser/0651-CAF3/
+  168  exit;
+  169  history
+  170  history > /run/media/hduser/0651-CAF3/
+  171  history > /run/media/hduser/0651-CAF3/Hadoop.txt

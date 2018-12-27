@@ -1,0 +1,21 @@
+
+1. Create java class for Hive UDF. This class should extends UDF class. Write code in evaluate method.
+
+2. Create jar of this class.
+
+3. Open Hive Terminal—-> add jar using   [Add jar <jar name>]
+
+4. create temporary function <function name> as <'class name with package'>;
+
+5. Create table;
+
+6. load data into table;
+
+7. select <function name> from <table name>;
+
+
+
+-------------------------------------------------------------
+
+Add jar MyHive.jar
+create temporary function myupfun as 'com.hive.example.MyUpper';

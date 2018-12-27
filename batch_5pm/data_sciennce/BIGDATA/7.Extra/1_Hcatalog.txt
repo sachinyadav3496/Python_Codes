@@ -1,0 +1,6 @@
+Apache HCatalog (Pig,Hive, HBase Interaction we can perform using HCatalog)
+
+1) https://acadgild.com/blog/loading-and-storing-hive-data-into-pig (Loading and Storing Hive Data into Pig) 2) https://www.bmc.com/blogs/what-is-apache-hcatalog-hcatalog-explained/ (HCatalog Exaplained)
+
+Points : a) HCatalog is a table as well as storage managment layer for Hadoop. b) Its enables users with different data processing tools like Pig,MapReduce & also helps read & write data on grid more easily. c) Hive by default has HCatalog included in it.
+

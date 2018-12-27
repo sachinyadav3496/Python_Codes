@@ -1,0 +1,20 @@
+​https://medium.com/@marcus.eisele/implementing-a-microservice-architecture-with-spring-boot-part-one-the-environment-cbc032473ab8
+
+SPring MicroServices : 1))))(https://github.com/alexandreesl/springbootexample)
+
+a) CustomerBackend
+b) Product Backend
+c) Order Backend
+
+2) ANOther example
+
+a)discovery-microservice-server (https://github.com/dineshonjava/discovery-microservice-server)
+b) accounts-microservice-server (https://github.com/dineshonjava/accounts-microservice-server)
+c) webclient-microservice-server-master (https://github.com/dineshonjava/webclient-microservice-server)
+
+3) spring-boot-microservices-master
+a)configservice
+b) counterservice
+c)gatewayservice
+d) registryservice
+e) template-service

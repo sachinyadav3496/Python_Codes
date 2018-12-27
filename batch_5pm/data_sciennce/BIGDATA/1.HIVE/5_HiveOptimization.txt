@@ -1,0 +1,1 @@
+https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.3/bk_hive-performance-tuning/content/ch_cost-based-optimizer.html

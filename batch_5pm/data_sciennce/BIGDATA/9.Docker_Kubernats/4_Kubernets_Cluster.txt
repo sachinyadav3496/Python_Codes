@@ -1,0 +1,25 @@
+Kubernetes DIND Cluster using Docker. (Installed it with root user)
+
+Handle Resource Management of distributed applications in clustered environment:
+
+Cluster will be available at port 8080 after execution of attached script.
+Kubernetes:
+
+prerequists : docker engine 1.12+ , kubectl
+a) Kubernetes Cluster
+wget https://cdn.rawgit.com/Mirantis/kubeadm-dind-cluster/master/fixed/dind-cluster-v1.8.sh
+chmod 700 dind-cluster-v1.8.sh
+./dind-cluster-v1.8.sh up
+
+
+b) kubectl Install
+>>apt-get update && apt-get install -y apt-transport-https>>curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add ->>apt-get update>>apt-get install -y kubectl
+
+​
+
+Kubernetes Cluster Script
+dind-cluster-v1.10.sh - 77KB
+Kubernetes CLUSTER Script V8
+dind-cluster-v1.8.sh - 48KB
+​https://xmudrii.com/posts/spawn-kubernetes-ci/​
+

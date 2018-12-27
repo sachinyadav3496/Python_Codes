@@ -1,0 +1,31 @@
+Hadoop Related Questions & Answers: 
+
+1) How To Fix Corrupt Blocks in HDFS? (https://acadgild.com/blog/how-to-fix-corrupt-blocks-in-hdfs)
+
+ 2) Hadoop Admin Commnds (https://acadgild.com/blog/hadoop-admin-commands) 
+
+3) Hdfs Commands Basics for Beginners (https://acadgild.com/blog/hdfs-commands-basics-beginners) 
+
+4) Configuring Replication Factor and Block Size in HDFS (https://acadgild.com/blog/configuring-replication-factor-block-size-hdfs)
+
+ 5) Key Configurations in Hadoop Installation (https://acadgild.com/blog/key-configurations-in-hadoop-installation) 
+
+6) Hadoop MultiNode Cluster Configuration (https://acadgild.com/blog/hadoop-multinode-cluster-configuration) 
+
+7) Querying HDFS using Apache DRILL (https://acadgild.com/blog/querying-hdfs-using-apache-drill) 
+
+8) Macros in Pig (https://acadgild.com/blog/macros-in-pig)
+
+ 9) Microsoft Azure : Introduction (https://acadgild.com/blog/what-is-microsoft-azure-an-introduction) 
+
+10)Which Hadoop Distribution is right? (https://acadgild.com/blog/hadoop-distribution-right) 
+
+11)Data Analysis using Sparklyr (https://acadgild.com/blog/hadoop-data-analysis-using-sparklyr) 
+
+12)Sparklyr R Interface for Apache Spark (https://acadgild.com/blog/sparklyr-r-interface-for-apache-spark)
+
+ 13)Visualize Outcomes of Pig Scripts using Zeeplin (https://acadgild.com/blog/how-to-integrate-pig-with-zeppelin) 
+
+14)MapReduce Design Pattern – Finding Top-K Records (https://acadgild.com/blog/mapreduce-design-pattern-finding-top-k-records)
+
+16) Automate File Copy from Local File System to HDFS Using HDFS-Slurper (https://acadgild.com/blog/automate-file-copy-from-local-file-system-to-hdfs-using-hdfs-slurper)

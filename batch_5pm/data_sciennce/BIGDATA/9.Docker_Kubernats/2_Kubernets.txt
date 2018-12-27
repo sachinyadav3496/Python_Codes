@@ -1,0 +1,55 @@
+1) Overview
+
+ 2) Learn Kubernetes Basics 
+
+3) Kubernetes Installation 
+
+4) Kubernetes Architecture
+
+ 5) Kubernetes Master Server Components
+
+ a) etcd b) kube-apiserver c) kube-controller-manager d) kube-scheduler e) cloud-controller-manager
+
+ 6) Kubernetes Node Server Components a) A container runtime b) kubelet c) kube-proxy d) kube-scheduler e) cloud-controller-manager
+
+ 7) Kubernetes Objects & Workloads a) Kubernetes Pods b) Kubernetes Replication Controller & Replica Sets 
+
+8) Kubernetes Images 
+
+9) Kubernetes Labels & Selectors
+
+ 10) Kubernetes Namespace 
+
+11) Kubernetes Service 
+
+12)Kubernetes Deployments a) Stateful Sets b) Daemon Sets c) Jobs & Cron Jobs 
+
+13) Other Kubernetes Components: a) Services b) Volume & Persistent Volumes c) Lables,Selectors & Annotations d) Kubernetes Secrets e) Kubernetes Network Policy
+
+14) Kubernetes API 
+
+15) Kubernetes Kubectl 
+
+16) Kubernetes Kubectl Commands 
+
+17) Kubernetes Creating an App 
+
+18) Kubernetes App Deployment 
+
+19) Kubernetes Autoscaling 
+
+20) Kubernetes Dashboard Setup 
+
+21) Kubernetes Monitoring
+
+ 22) Federation using kubefed 
+
+23) Deploying on Kubernetes using Spinnaker
+
+Helpful Links:
+
+1) https://www.weave.works/blog/kubernetes-beginners-guide/ 
+
+2)https://www.aquasec.com/wiki/display/containers/70+Best+Kubernetes+Tutorials 
+
+3) https://medium.com/quick-code/top-tutorials-to-learn-kubernetes-e9507e76d9a4​

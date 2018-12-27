@@ -1,0 +1,6 @@
+https://linoxide.com/cluster/setup-single-node-hadoop-cluster-docker/
+
+How to Setup a Single Node Hadoop Cluster Using Docker?
+This blog talks about how to setup a single node hadoop cluster using docker. Run hadoop cluster inside a docker container in no time!
+linoxide.com
+​http://172.17.0.2:50070/dfshealth.html#tab-overview (Once Hadoop cluster is configured using Docker then verify it on above URL.

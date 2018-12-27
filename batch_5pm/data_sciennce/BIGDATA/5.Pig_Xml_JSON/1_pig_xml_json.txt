@@ -1,0 +1,21 @@
+1) http://joshualande.com/read-write-json-apache-pig
+
+ 2) https://stackoverflow.com/questions/28367095/load-json-data-using-pig
+
+ 3) http://www.hadoopadmin.co.in/pig/process-xml-file-via-apache-pig/
+
+ 4) http://www.kalyanhadooptraining.com/2014/10/xml-parsing-using-pig.html
+
+ 5) https://acadgild.com/blog/converting-xml-into-csv-using-pig/
+
+ 6) https://acadgild.com/blog/sentiment-analysis-on-tweets-using-afinn-dictionary/
+
+ 7) https://acadgild.com/blog/pig-use-case-sentiment-analysis-on-demonetization/
+
+ 8) https://drive.google.com/file/d/0ByJLBTmJojjzNkRsZWJiY1VGc28/view​
+
+XMLData Using Pig
+
+​http://hadoopgeek.com/apache-pig-xml-parsing-xpath/​
+
+​

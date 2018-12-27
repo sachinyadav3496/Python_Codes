@@ -1,0 +1,55 @@
+Spark MLIB : RDD-Based API Guide (2.2.2)
+
+
+1) Datatypes: RDD-Based
+
+a) Local Vector b) Labeled Point c) Local Matrix d) Distributed Matrix a) RowMatrix b) IndexedRowMatrix c) CoordinateMatrix d) BlockMatrix
+
+2) Basic Statistics: RDD-Based API a) Summary Statistics b) Coorelations c) Stratified Sampling d) Hypothesis Testing +Streaming Significance Testing e) Random Data Generation f) Kernel Density Estimation
+
+3) Classification & Regression - RDD-based API
+
+     a) Linear Models
+           + Classification (SVMs,Logistic Regression)    
+           + Linear Regression (Least Squares,LASSO,RIDGE)
+     b) Decision Trees
+     c) Ensembles of Decision Trees
+           + Random Forests    
+           + Gradient-Boosted Trees
+     c) Naive Bayes
+     d) Isotonic Regression    
+4) Collaborative Filtering : RDD-based API
+
+ 1> Collaborative Filtering
+      + Explicit Vs Implicit Feedback
+      + Scaling of the Regularization Parameter
+ 2> Alternating Least Squares(ALS)
+ 3> Examples
+ 4> Tutorial      
+5) Clustering : RDD-based API
+
+ 1> K-means
+ 2> Gaussian mixture
+ 3> Power iteration clustering (PIC)
+ 4> Latent Dirichlet allocation (LDA)
+ 5> Bisecting k-means
+ 6> Streaming k-means
+6) Dimensionality Reduction
+
+1> Singular Value Decomposition (SVD)
+2> Principal Component Analysis (PCA)
+7) Feature Extraction & Transformation
+
+8) Frequent Pattern Matching
+
+ 1) FP-Growth
+ 2) Association Rules
+ 3) PrefixSpan
+9) Evaluation Metrics
+
+10) PMML Model Export
+
+11) Optimization (Developer)
+
+ 1) Stochastic Gradient Descent 
+ 2) Limited-Memory BFGS (L-BFGS)

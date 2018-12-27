@@ -1,0 +1,46 @@
+    1  exit
+    2  ssh localhost
+    3  exit
+    4  ssh-keygen -t rsa -P ""
+    5  cd 
+    6  cp -a .ssh/id_rsa.pub .ssh/authorized_keys
+    7  cd .ssh/
+    8  ls
+    9  cd ..
+   10  ssh localhost
+   11  ls
+   12  cd /root/Down
+   13  cd /root/Downloads
+   14  sudo cd /root/Downloads
+   15  ls
+   16  cd /root/Downloads
+   17  sudo cd /root/Downloads
+   18  pwd
+   19  exit
+   20  sudo mkdir -p /app/hadoop/tmp
+   21  sudo chown hduser:hduser -R /usr/local/hadoop
+   22  cd $HADOOP_INSTALL
+   23  ls
+   24  cd etc/
+   25  cd hadoop/
+   26  vim core-site.xml 
+   27  cp mapred-site.xml.template mapred-site.xml
+   28  vim mapred-site.xml
+   29  vim hdfs-site.xml 
+   30  sudo mkdir -p /usr/local/hadoop_store/hdfs/namenode
+   31  sudo mkdir -p /usr/local/hadoop_store/hdfs/datanode
+   32  sudo chown -R hduser:hduser /usr/local/hadoop_store
+   33  vim hdfs-site.xml 
+   34  exec bash
+   35  cd
+   36  hadoop namenode -format
+   37  cd $HADOOP_INSTALL
+   38  cd sbin/
+   39  ls
+   40  ./start-all.
+   41  ./start-all.sh
+   42  jps
+   43  init 0
+   44  exit
+   45  history 
+   46  history > hadoop_installation.txt

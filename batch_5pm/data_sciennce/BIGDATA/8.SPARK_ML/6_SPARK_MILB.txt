@@ -1,0 +1,72 @@
+Link : https://spark.apache.org/docs/2.2.2/ml-pipeline.html​
+
+1) Main Concepts in Pipelines
+
+DataFrame Pipeline Components
+
+Transformers
+
+Estimators 
+
+Properties of ML Algorithms
+
+ML Pipeline
+
+How it works
+
+Details    
+
+ML Parameters
+
+2) Code Examples
+
+Example : Estimator,Transfomer and Param Example : Pipeline Example : Model Selection (hyperparameter tuning)
+
+3) Extracting,Transforming & Selecting Features:
+
+    a) Features Extractors
+        + TF-IDF
+        + Word2Vec
+        + CountVectorizer
+​
+​
+    b)Feature Transformers
+        + Tokenizer
+        +StopWordsRemover
+        +n-gram
+        +Binarizer
+        +PCA
+        +PolynomialExpansion
+        +Discrete Cosine Transform (DCT)
+        +StringIndexer
+        +IndexToString
+        +OneHotEncoder (Deprecated since 2.3.0)
+        +OneHotEncoderEstimator
+        +VectorIndexer
+        +Interaction
+        +Normalizer
+        +StandardScaler
+        +MinMaxScaler
+        +MaxAbsScaler
+        +Bucketizer
+        +ElementwiseProduct
+        +SQLTransformer
+        +VectorAssembler
+        +VectorSizeHint
+        +QuantileDiscretizer
+        +Imputer
+​
+    c) Feature Selectors
+        +VectorSlicer
+        +RFormula
+        +ChiSqSelector
+​
+​
+    d) Locality Sensitive Hashing
+        >LSH Operations
+             + Feature Transformation
+             + Approximate Similarity Join
+             + Approximate Nearest Neighbour Search
+        >LSH Algorithms
+             + Bucketed Random Projection for Euclidean Distance
+             + MinHash for Jaccard Distance

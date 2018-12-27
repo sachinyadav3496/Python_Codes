@@ -1,0 +1,87 @@
+SPARK MLIB Using STANDARD DATATYPES (2.2.2)
+
+
+Spark MLIB: (https://spark.apache.org/docs/2.2.2/ml-classification-regression.html) >>>Spark-2.2.2 (Without RDD): Using Spark MLIB standard datatypes
+
+1) Datatypes:
+
+a) Local Vector b) Labeled Point c) Local Matrix d) Distributed Matrix a) RowMatrix b) IndexedRowMatrix c) CoordinateMatrix
+
+2) Basic Statistics: a) Correlation b) Hypothesis testing
+
+3) Classification & Regression
+
+   1> CLASSIFICATION:
+​
+    a) Logistic Regression
+             + Binomial Logistic Regression
+             + Multinomial Logistic Regression
+    b) Decision Tree Classifier
+    c) Random Forest Classifier
+    d) Gradient-Boosted Tree(GBT) Classifier 
+    e) MultiLayer Perceptron Classifier
+    f) Linear Support Vector Machine 
+    g) One-Vs-Rest Classifer(a.k.a One-Vs-All)
+    h) Naive Bayes
+​
+  2> REGRESSION
+​
+    a) Linear Regression
+    b) Generalized Linear Regression
+          + Available Families
+    c) Decision Tree Regression
+    d) Random Forest Regression
+    e) Gradient-Boosted Tree(GBT) Regression
+    f) Survival Regression
+    g) Isotonic Regression
+​
+  3> LINEAR METHODS
+​
+  4> DECISION TREES
+​
+    a) Inputs & Outputs
+          . Input Columns
+          . Output Columns
+​
+​
+ 5> TREE ENSEMBLES 
+​
+    a) Random Forests
+        +Inputs & Outputs
+              . Inputs Columns
+              . Output Columns(Predictions)
+​
+    b) Gradient-Boosted Trees (GBTs)
+        +Inputs & Outputs
+             . Inputs Columns
+             . Output Columns(Predictions)
+4) Clustering
+
+  1> K-Means
+      + Input Columns
+      + Output Columns
+​
+  2> Latent Dirichlet Allocation(LDA)
+  3> Bisecting K-Means
+  4> Gaussian Mixture Model(GMM)
+      + Input Columns
+      + Output Columns
+5) Collaborative Filtering
+
+ 1> Collaborative Filtering
+      + Explicit Vs Implicit Feedback
+      + Scaling of the Regularization Parameter
+      + Cold-start Strategy
+6) Frequent Pattern Matching 1> FP-Growth
+
+7) Model Selection & Tuning
+
+ 1> Model Selection (a.k.a hyperparameter tuning)
+ 2> Cross-Validation
+ 3> Train-Validation Split
+8) Advanced Topics
+
+1> Optimization of Linear Methods(Developer)
+      + Limited-Memory BFGS(L-BFGS)
+      + Normal Equation Solver for Weight Least Squares
+      + Iteratively Reweighted Least Squares(IRLS)

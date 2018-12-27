@@ -1,0 +1,45 @@
+Link:
+1) https://stackoverflow.com/questions/24078668/how-to-change-sqoop-metastore
+2) https://data-flair.training/blogs/introduction-sqoop-metastore-tool/
+BY default Sqoop Metastore Link HSQL(Memcache). We can check in sqoop-site.xml
+
+Change Metastore from HSQL to MySQL>>>>>
+https://stackoverflow.com/questions/24078668/how-to-change-sqoop-metastore​
+
+Sqoop command in Oozie to connect with the jobs stored in metastore
+
+sqoop \
+job \
+--meta-connect \
+"jdbc:hsqldb:file:/on/server/not/hdfs/sqoop-metastore/sqoop-meta.db;shutdown=true" \
+--create \
+jobName \
+-- \
+import \
+--connect jdbc:oracle:thin:@server:port:sid \
+--username username \
+--password-file /path/on/hdfs/server.password \
+--table TABLE \
+--incremental append \
+--check-column ID \
+--last-value "0" \
+--target-dir /path/on/hdfs/TABLES
+
+Some Open questions:
+1) Sqoop Metastore:
+
+a)  Where , why & how we configure Sqoop Metastore?b)  Whats the use of Sqoop Metastore in real time?c)  Default Metastore of Sqoop & how we can change Sqoop Metastore? (HSQL is the default one & its a MemCache means Memory Database)d)  Sqoop Merge commande)  Sqoop REST APISf)   How & why we create Sqoop jobs & whats the use-case?g)  How sqoop get to know from which record next job need to import data into  HDFS.(whether updated or appended)>>>>>Answer is Sqoop Metastore (Implement why & how)
+Sol: Go inside conf dir & open sqoop-site.xml (Metstore is defined & there we change it it any SQL database) 
+
+h)  To test default metastore of Sqoop >>>>>>sqoop metastore
+jdbc:hsqldb:hsql://metaserver.example.com:16000/sqoop
+
+2) Oozie Bundle Jobs :: If we want to execute mutiple co-ordinator jobs dependent on each other or want to run same job parallelely then we create Bundle jobs.PFB attached code & screenshot for further clarification(Bundle Jobs)>>>(Go through the code & find the root file for the project).
+
+
+a)  How to call Oozie workflow from shell script? >>(https://hadoopjournal.wordpress.com/2015/12/15/call-oozie-workflow-from-shell-script/)b)  Writing shell script for each & every workflow(Hive,Sqoop,Mapreduce)
+c)  How Oozie connect with Sqoop metastore to run jobs stored in Sqoop metastore.
+Note : 1) Sqoop Metastore & Sqoop job using Oozie inter-connected 
+
+2) Oozie connect to Sqoop using Sqoop Metastore  & run jobs stored in it(We will change metadata to MySQL so that multiple users (oozie or other external systems) can execute or access sqoop job at the same time)
+

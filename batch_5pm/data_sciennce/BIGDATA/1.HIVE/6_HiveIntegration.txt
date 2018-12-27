@@ -1,0 +1,2 @@
+1) HBase-Hive : https://acadgild.com/blog/integrating-hive-hbase
+2) Hive-Tez Integration (Acadgild)

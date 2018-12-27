@@ -1,0 +1,3 @@
+1) https://www.e4developer.com/2018/05/21/getting-started-with-kafka-in-spring-boot/​
+
+2) https://medium.com/@ulymarins/an-introduction-to-apache-kafka-and-microservices-communication-bf0a0966d63​

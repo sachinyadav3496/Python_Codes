@@ -1,0 +1,6 @@
+1) https://acadgild.com/blog/hive-udtf (UDTF implementation)
+
+2) http://hadoopnalgos.blogspot.com/2017/02/udf-udaf-and-udtf-in-hive.html (UDAF,UDF & UDTF)>>>>General Info
+
+3) UDF & UDAF Implementation :
+https://dzone.com/articles/writing-custom-hive-udf-andudaf

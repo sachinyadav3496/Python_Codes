@@ -1,0 +1,22 @@
+SPARK MLIB Using STANDARD DATATYPES 
+
+Spark MLIB: (http://spark.apache.org/docs/1.2.1/mllib-guide.html) >>>Spark-1.2.1 (Without RDD): Using Spark MLIB standard datatypes
+
+1) Datatypes:
+
+a) Local Vector b) Labeled Point c) Local Matrix d) Distributed Matrix a) RowMatrix b) IndexedRowMatrix c) CoordinateMatrix
+
+2) Basic Statistics: a) Summary Statistics b) Coorelations c) Stratified Sampling d) Hypothesis Testing e) Random Data Generation
+
+3) Classification and Regression a) Linear Models (SVMs,Logistic Regression,Linear Regression) b) Naive Bayes c) Decision Trees d) Ensembles of Trees (Random Forests & GBT(Gradient Boosted Trees)
+
+4) Collaborative Filtering a) Alternating Least Squares(ALS)
+
+5) Clustering a) K-Means
+
+6) Dimensionality Reduction a) Singular Value Decomposition b) Principal Component Analysis(PCA)
+
+7) Feature Extraction & Transformation
+
+8) Optimization (Developer) a) Stochastic Gradient Descent b) Limited-memory BFGS (L-BFGS)
+

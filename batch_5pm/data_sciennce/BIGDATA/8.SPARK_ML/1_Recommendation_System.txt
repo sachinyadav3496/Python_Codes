@@ -1,0 +1,25 @@
+Recommendation System
+
+Designing Recommendation System
+
+Recommnedation System steps:
+
+1) Data collection :it can be collection explicitly & implicitly a) Explicit data is information that is provided intentionally, i.e. input from the users such as movie ratings. b) Implicit data is information that is not provided intentionally but gathered from available data streams like search history, clicks, order history, etc.
+
+2)Data storage 
+
+3) Filtering the data 
+
+a) Content-Bases Filtering
+
+Profile vector>>>this vector contains past behaviuor of user i.e like/dislike & ratings given by them. item vector >>>details of each movie ,like genre,cast ,director etc
+
+If a new user or new item is added to the dataset. this is cold start. a) Visitor cold start b) Product cold start
+
+There are 3 types of Recommendation systems:
+
+a) Content-Based Filtering : Profile Vector & Item vector
+
+ b) Collaborative (Similarity: User-Item & Item-Item similarity 
+
+c) Popularity

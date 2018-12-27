@@ -1,0 +1,5 @@
+​http://www.briansjavablog.com/2016/05/spring-boot-angular-amazon-web-services.html​
+
+Spring Boot & Amazon Web Services (EC2, RDS & S3)
+This post will take you through a step by step guide to building and deploying a simple Java application to the AWS cloud platform. The appl...
+www.briansjavablog.com

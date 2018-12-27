@@ -1,0 +1,21 @@
+Alternates for Hadoop MapReduce (https://acadgild.com/blog/start-learning-big-data-using-spark)
+
+Alternates for Hadoop MapReduce (https://acadgild.com/blog/start-learning-big-data-using-spark)
+​
+    a) Apache Spark - Open Source computing system that aims to make data analytics fast- both fast to run & fast to write
+    b) GraphLab - A redesign fully distributed API,HDFS integration & a wide range of new machine learing toolkits.
+    c) HPCC Systems - (High Performance Computing Cluster) is a massive parallel processing computing platform.
+    d) Dryad - It is investigating programming model for writing parallel & distributed programs.
+    e) Apache Flink - Open source distributed data processing platform.
+    f) Apache Storm
+    g) R3 - It is a mapreduce engine writen in python using a Redis backend.
+    h) Disco -
+    i) Phoenix - Its a shared-memory implementation of Google MapReduce model for data-intensive processing tasks.
+    j) Plasma
+    i) Peregrine
+    j) HTTP MR
+    k) sector/sphere
+    l) Filemap
+    m) misco
+    n) MR-MPI
+    o) GridGain

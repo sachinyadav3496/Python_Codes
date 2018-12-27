@@ -1,0 +1,79 @@
+Hive Topics: (http://hadooptutorial.info/category/hive/page/2/)
+
+1) Hive Architecture 
+
+2) Hive Metastore 
+
+3) Hive DataTypes (https://acadgild.com/blog/hive-complex-data-types-with-examples) 
+
+4) Internal & External Tables
+
+5) Hive Optimization Techniques: 
+
+a) Partioning(Static & Dynamic Partition) & Bucketing
+
+b) Hive Joins > Map + BucketMap + SMB(SortedBucketMap) + Skew
+
+c) Hive FileFormats ( ORC+SEQUENCE+TEXT+AVRO+PARQUET.....) 
+
+d) CBO 
+
+e) Vectorization 
+
+f) Indexing (Compact + BitMap) 
+
+g) Integration with TEZ & Spark
+
+6) Hive SerDer ( Custom + InBuilt) 
+
+7) Hive integration NoSQL(HBase + MongoDB + Cassandra) 
+
+8) Thrift API (Thrift Server) 
+
+9) UDF,UDTF & UDAF 
+
+10) Hive Multiple Delimiters 
+
+11) XML & JSON Data Loading HIVE. 
+
+12) Aggregation & Windowing Functions in Hive 
+
+13) Hive Compression (http://hadooptutorial.info/enable-compression-in-hive/) 
+
+14) Hive Built-In Functions (http://hadooptutorial.info/hive-built-in-functions/) 
+
+15) Hive Authorization Models & Hive Security (Default Authorization + Storage Based Authorization(SBA)+SQL Standards Based Authorization) (http://hadooptutorial.info/hive-authorization-models-and-hive-security/) 
+
+16) Hive JDBC Client for HiveServer1 
+
+17) Hive JDBC CLient for HiveServer2 
+
+18) Hive Server2 (http://hadooptutorial.info/hiveserver2-beeline-introduction/) 
+
+19) Hive Connect with Tableau (https://acadgild.com/blog/connecting-hive-with-tableau)
+
+20) http://hadooptutorial.info/category/hive/page/2/ 
+
+21) Case Studies :
+
+a) Sentimental Analysis Hive
+
+b) https://aws.amazon.com/blogs/big-data/powering-amazon-redshift-analytics-with-apache-spark-and-amazon-machine-learning/ 
+
+c) https://acadgild.com/blog/hive-real-life-use-cases 
+
+d) https://acadgild.com/blog/hive-use-case-real-estate-analysis​
+
+e) https://acadgild.com/blog/big-data-case-study-e-commerce-data-analysis-using-hadoop​
+
+f) https://acadgild.com/blog/aviation-data-analysis-using-apache-hive​
+
+g) https://acadgild.com/blog/how-to-export-data-from-hive-to-mongodb​
+
+h) https://acadgild.com/blog/scheduling-hadoop-jobs-using-jenkins (Scheduling Hadoop Jobs using Jenkins) 
+
+i) https://acadgild.com/blog/hadoop-use-case-employee-analysis-using-hive(IBM Data Analysis Using Hive) 
+
+j) http://hadooptutorial.info/hive-use-case-example-for-json-data/(Hive Use-Case Example with US Government web sites data)
+
+k) http://hadooptutorial.info/sqoop-hive-use-case-example/ (Hive UseCase)

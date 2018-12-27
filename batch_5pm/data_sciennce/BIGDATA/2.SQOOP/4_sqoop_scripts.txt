@@ -1,0 +1,111 @@
+#Sqoop - import or export SQL data into hadoop
+#---------------------------------------------
+sqoop eval --connect jdbc:mysql://localhost/ishu --username root -password cloudera --query "CREATE DATABASE SQOOP_SCRIPT;"
+
+sqoop eval --connect jdbc:mysql://localhost/ishu --username root -password cloudera --query "use SQOOP_SCRIPT;"
+
+sqoop eval --connect jdbc:mysql://localhost/SQOOP_SCRIPT --username root -password cloudera --query "CREATE TABLE CUSTOMERS(
+ID INT NOT NULL,
+NAME VARCHAR (20) NOT NULL,
+AGE INT NOT NULL,
+ADDRESS CHAR (25),
+SALARY DECIMAL (18, 2),
+PRIMARY KEY (ID)
+);"
+
+#LOAD DATA INTO CUSTOMERS
+#-------------------------
+sqoop eval --connect jdbc:mysql://localhost/SQOOP_SCRIPT --username root -password cloudera --query "INSERT INTO CUSTOMERS VALUES(1, 'Ramesh', 32, 'Ahmedabad', 2000.00 );"
+
+sqoop eval --connect jdbc:mysql://localhost/SQOOP_SCRIPT --username root -password cloudera --query "INSERT INTO CUSTOMERS VALUES(2, 'Rahul', 30, 'Lucknow', 2000.00 );"
+
+sqoop eval --connect jdbc:mysql://localhost/SQOOP_SCRIPT --username root -password cloudera --query "INSERT INTO CUSTOMERS VALUES(3, 'Sandeep', 28, 'Kanpur', 2400.00 );"
+
+sqoop eval --connect jdbc:mysql://localhost/SQOOP_SCRIPT --username root -password cloudera --query "INSERT INTO CUSTOMERS VALUES(4, 'Ram', 36, 'Allahabad', 3500.00 );"
+
+sqoop eval --connect jdbc:mysql://localhost/SQOOP_SCRIPT --username root -password cloudera --query "INSERT INTO CUSTOMERS VALUES(5, 'Ishu', 26, 'Gurgaon', 95000.00 );"
+
+
+#Sqoop Import
+#----------------
+sqoop import --connect jdbc:mysql://localhost/SQOOP_SCRIPT --username root -password cloudera --table CUSTOMERS --m 1 --target-dir /user/cloudera/customers
+
+
+sqoop eval --connect jdbc:mysql://localhost/SQOOP_SCRIPT --username root -password cloudera --query "CREATE TABLE All_table1(
+ID INT NOT NULL,
+NAME VARCHAR (20) NOT NULL,
+AGE INT NOT NULL,
+ADDRESS CHAR (25),
+SALARY DECIMAL (18, 2),
+PRIMARY KEY (ID)
+);"
+
+#LOAD DATA INTO All_table1
+#----------------------------
+sqoop eval --connect jdbc:mysql://localhost/SQOOP_SCRIPT --username root -password cloudera --query "INSERT INTO All_table1 VALUES(1, 'Ramesh', 32, 'Ahmedabad', 2000.00 );"
+
+sqoop eval --connect jdbc:mysql://localhost/SQOOP_SCRIPT --username root -password cloudera --query "INSERT INTO All_table1 VALUES(2, 'Rahul', 30, 'Lucknow', 2000.00 );"
+
+# and
+
+sqoop eval --connect jdbc:mysql://localhost/SQOOP_SCRIPT --username root -password cloudera --query "CREATE TABLE All_table2(
+ID INT NOT NULL,
+NAME VARCHAR (20) NOT NULL,
+AGE INT NOT NULL,
+ADDRESS CHAR (25),
+SALARY DECIMAL (18, 2),
+PRIMARY KEY (ID)
+);"
+
+#LOAD DATA INTO All_table2
+#---------------------------------
+sqoop eval --connect jdbc:mysql://localhost/SQOOP_SCRIPT --username root -password cloudera --query "INSERT INTO All_table2 VALUES(1, 'Ramesh', 32, 'Ahmedabad', 2000.00 );"
+
+sqoop eval --connect jdbc:mysql://localhost/SQOOP_SCRIPT --username root -password cloudera --query "INSERT INTO All_table2 VALUES(2, 'Rahul', 30, 'Lucknow', 2000.00 );"
+ 
+#Sqoop Import all tables
+#---------------------------
+sqoop import-all-tables --connect jdbc:mysql://localhost/SQOOP_SCRIPT --username root -password cloudera --m 1 --warehouse-dir /user/cloudera/all_tables
+
+sqoop eval --connect jdbc:mysql://localhost/SQOOP_SCRIPT --username root -password cloudera --query "CREATE TABLE export_table(
+ID INT NOT NULL,
+NAME VARCHAR (20) NOT NULL,
+AGE INT NOT NULL,
+ADDRESS CHAR (25),
+SALARY DECIMAL (18, 2),
+PRIMARY KEY (ID)
+);"
+
+
+#Sqoop Export
+#----------------
+sqoop export --connect jdbc:mysql://localhost/SQOOP_SCRIPT --username root -password cloudera --table export_table --export-dir /user/cloudera/customers/part-m-00000
+
+sqoop eval --connect jdbc:mysql://localhost/SQOOP_SCRIPT --username root -password cloudera --query "INSERT INTO CUSTOMERS VALUES(6, 'Delhi', 32, 'Ahmedabad', 2000.00 );"
+
+sqoop eval --connect jdbc:mysql://localhost/SQOOP_SCRIPT --username root -password cloudera --query "INSERT INTO CUSTOMERS VALUES(7, 'Jeet', 32, 'Lucknow', 90000.00 );"
+
+sqoop eval --connect jdbc:mysql://localhost/SQOOP_SCRIPT --username root -password cloudera --query "INSERT INTO CUSTOMERS VALUES(8, 'Neeraj', 30, 'Lucknow', 90000.00 );"
+
+#Sqoop Incremental append
+#-------------------------------
+sqoop import --connect jdbc:mysql://localhost/SQOOP_SCRIPT --username root -password cloudera --table CUSTOMERS --target-dir /user/cloudera/customers --incremental append --check-column ID --last-value 5
+
+#Sqoop Incremental last modified - table should be have date column
+#sqoop import --connect jdbc://mysql:/localhost/SQOOP_SCRIPT --username root -password cloudera --table CUSTOMERS --incremental lastmodified --check-column colname --last-value  yyyy-mm dd 0000:00:0
+
+#Sqoop Job "sqoop job --create/list/exec/delete"
+##sqoop job --create dailyjobs --import --connect jdbc:mysql://localhost/SQOOP_SCRIPT --username root -password cloudera --table CUSTOMERS --m 1 --target-dir /user/cloudera/sqoop_job
+
+
+#Sqoop Boundary Query - when need to import data partially(min(),max()
+sqoop import --connect jdbc:mysql://localhost/SQOOP_SCRIPT --username root -password cloudera --table CUSTOMERS --target-dir /user/cloudera/boundary_query --boundary-query 'select min(ID), max(ID) from CUSTOMERS where ID > 2'
+
+#Sqoop split by - interger use if other then need enable property (-dorg.apache.sqoop.splitter.allow_text_splitter=true)
+sqoop import --connect jdbc:mysql://localhost/SQOOP_SCRIPT --username root -password cloudera --table CUSTOMERS --warehouse-dir /user/cloudera/split_by1 --split-by SALARY
+
+#Sqoop codegen - create jar file
+#sqoop codegen --connect jdbc:mysql://localhost/SQOOP_SCRIPT --username root -password cloudera --table CUSTOMERS
+
+#Sqoop Eval - we can evaluate any type of SQL query that can be either DDL or DML statement.
+#sqoop eval --connect jdbc:mysql://localhost/SQOOP_SCRIPT --username root -password cloudera --query 'SELECT * FROM CUSTOMERS LIMIT 3'/"INSERT INTO employee VALUES(1207,Raju,UI dev,15000,TP)"

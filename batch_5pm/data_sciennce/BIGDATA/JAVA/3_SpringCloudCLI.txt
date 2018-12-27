@@ -1,0 +1,61 @@
+1) https://www.e4developer.com/2018/03/06/how-to-learn-spring-cloud-the-practical-way/​
+
+How to learn Spring Cloud – the practical way | E4developer
+“How do you learn Spring Cloud?” I heard that question posed a few times before in different ways. Here, I will give you my answer on what I think is the best way of learning Spring Cloud.
+www.e4developer.com
+2) https://www.baeldung.com/spring-cloud-gateway​
+
+3) First of all, the Spring Cloud currently contains:
+
+​
+
+Spring Cloud Config
+
+Spring Cloud Netflix
+
+Spring Cloud Bus
+
+Spring Cloud for Cloud Foundry
+
+Spring Cloud Cloud Foundry Service Broker
+
+Spring Cloud Cluster
+
+Spring Cloud Consul
+
+Spring Cloud Security
+
+Spring Cloud Sleuth
+
+Spring Cloud Data Flow
+
+Spring Cloud Stream
+
+Spring Cloud Stream App Starters
+
+Spring Cloud Task
+
+Spring Cloud Task App Starters
+
+Spring Cloud Zookeeper
+
+Spring Cloud for Amazon Web Services
+
+Spring Cloud Connectors
+
+Spring Cloud Starters
+
+Spring Cloud CLI
+
+Spring Cloud Contract
+
+Spring Cloud Gateway
+
+4) https://cloud.spring.io/spring-cloud-netflix/single/spring-cloud-netflix.html#_router_and_filter_zuul (Spring Cloud Netflix)
+
+5) Spring Cloud Gateway can be considered a successor to the Spring Cloud Netflix Zuul project and helps in implementing a Gateway pattern in a microservices environment. 
+
+(https://dzone.com/articles/spring-cloud-gateway-configuring-a-simple-route)
+
+​
+

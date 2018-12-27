@@ -1,0 +1,84 @@
+SPARK ML(Machine Pipelines) Using STANDARD DATATYPES (2.3.2)
+
+Last updated last month
+​
+
+2) ML Pipelines: Dataframe | Transformer | Estimator | Pipeline | Parameter 
+
+a) Main Concepts in Pipelines
+
+Dataframe
+Pipelines Components
+
+ +Transformers 
+
++Estimators 
+
++Properties of pipelines components
+
+ Pipeline
+
+How it works
+
+Details
+
+Parameters
+
+ML Persistence : 
+
+Saving & Loading Pipelines
+
++Backward Compatibility of ML persistence
+
+    b) Code Examples 
+         + Example : Estimator,Tranformer and Param
+         + Example : Pipeline
+         + Model Selection (hyperparameter tuning)
+3) Extracting,Transforming & Selecting Features:
+
+    a) Features Extractors
+        + TF-IDF
+        + Word2Vec
+        + CountVectorizer
+        + FeatureHasher
+​
+    b)Feature Transformers
+        + Tokenizer
+        +StopWordsRemover
+        +n-gram
+        +Binarizer
+        +PCA
+        +PolynomialExpansion
+        +Discrete Cosine Transform (DCT)
+        +StringIndexer
+        +IndexToString
+        +OneHotEncoder (Deprecated since 2.3.0)
+        +OneHotEncoderEstimator
+        +VectorIndexer
+        +Interaction
+        +Normalizer
+        +StandardScaler
+        +MinMaxScaler
+        +MaxAbsScaler
+        +Bucketizer
+        +ElementwiseProduct
+        +SQLTransformer
+        +VectorAssembler
+        +VectorSizeHint
+        +QuantileDiscretizer
+        +Imputer
+​
+    c) Feature Selectors
+        +VectorSlicer
+        +RFormula
+        +ChiSqSelector
+​
+​
+    d) Locality Sensitive Hashing
+        >LSH Operations
+             + Feature Transformation
+             + Approximate Similarity Join
+             + Approximate Nearest Neighbour Search
+        >LSH Algorithms
+             + Bucketed Random Projection for Euclidean Distance
+             + MinHash for Jaccard Distance

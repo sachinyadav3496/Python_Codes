@@ -1,0 +1,21 @@
+
+
+1) https://cloud.spring.io/spring-cloud-aws/​
+
+2) http://cloud.spring.io/spring-cloud-aws/1.2.x/​
+
+3) https://www.javacodegeeks.com/2015/10/spring-and-amazon-web-services.html​
+
+4) https://www.baeldung.com/spring-cloud-aws-messaging​
+
+5) https://medium.com/oril/uploading-files-to-aws-s3-bucket-using-spring-boot-483fcb6f8646 (AWS S3 Bucket using Spring Boot without using Spring Cloud AWS)
+
+6) https://github.com/spring-cloud-samples/aws-refapp (Spring Cloud AWS Example spring cloud AWS library)
+
+7) https://blog.cloudthat.com/implementation-of-microservices-with-spring-boot-on-aws-and-in-docker-part-1/ (Spring Boot AWS SDK Example)
+
+8) https://github.com/brant-hwang/spring-cloud-aws-example (Spring-Boot based Amazon Simple Storage Service(S3) API Sample)
+
+9) https://www.edureka.co/blog/microservices-with-spring-boot (Spring Microservices Eureka)
+
+​

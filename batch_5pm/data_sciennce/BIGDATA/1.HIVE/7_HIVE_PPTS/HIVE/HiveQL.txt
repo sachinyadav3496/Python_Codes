@@ -1,0 +1,217 @@
+show databases;
+
+create database hivedatabase;
+
+show databases;
+
+describe database hivedatabase;
+
+use hivedatabase;
+
+show tables;
+
+------------------------------------------- Word Count ------------------------------------------------
+1. CREATE TABLE WordCount (line string);
+2. SHOW TABLES;
+3. LOAD DATA LOCAL INPATH '/home/cloudera/Dataset/HiveDataset/test.txt' OVERWRITE INTO TABLE WordCount;
+4. SELECT * FROM WordCount;
+5. SELECT word, count(*) AS count FROM (SELECT explode(split(line, ' ')) AS word FROM wordcount) w GROUP BY word;
+
+
+-------------------------------------------INTERNAL TABLE----------------------------------------------
+
+#Create Internal Table: Employee_internal
+
+CREATE TABLE IF NOT EXISTS Employee_internal (eid int, name String, salary double, designation String)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t' 
+LINES TERMINATED BY '\n'
+STORED AS TEXTFILE;
+
+LOAD DATA LOCAL INPATH '/home/cloudera/Dataset/HiveDataset/employee.txt' OVERWRITE INTO TABLE Employee_internal;
+
+Select * from Employee_internal where salary=55000;
+
+
+-------------------------------------------- EXTERNAL TABLE ----------------------------------------------
+
+Create External Table: Employee_external
+
+
+CREATE DATABASE MYDATABASE LOCATION '/user/cloudera';
+
+CREATE EXTERNAL TABLE IF NOT EXISTS Employee_external ( eid int, name String, salary String, designation String)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t' 
+LINES TERMINATED BY '\n'
+STORED AS TEXTFILE
+LOCATION '/user/cloudera/mydatabase';
+
+LOAD DATA LOCAL INPATH '/home/cloudera/Dataset/HiveDataset/employee.txt' OVERWRITE INTO TABLE Employee_external;
+
+set hive.cli.print.header=true;
+
+Select * from Employee_external where salary=55000;
+
+
+-----------------------------------EXTERNAL TABLE BY HDFS FILE-----------------------------------------
+
+Create External Table: Employee_external_hdfs
+
+CREATE EXTERNAL TABLE IF NOT EXISTS Employee_external_hdfs (eid int, name String, salary String, designation String)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t' 
+LINES TERMINATED BY '\n'
+STORED AS TEXTFILE
+LOCATION '/user/cloudera/mydatabase';
+
+LOAD DATA INPATH '/user/hdfs/employee_hdfs.txt' OVERWRITE INTO TABLE Employee_external_hdfs;
+
+Select * from Employee_external_hdfs where salary=55000;
+
+
+------------------------------------------- STATIC PARTITIONING ----------------------------------------
+
+set hive.exec.dynamic.partition.mode=nonstrict;
+set hive.exec.dynamic.partition=true;
+
+CREATE TABLE emp_country(eid int , ename string , esal int)
+PARTITIONED BY (ecountry string)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '|'
+STORED AS TEXTFILE;
+
+LOAD DATA LOCAL INPATH '/home/cloudera/Dataset/HiveDataset/emp.txt' 
+INTO TABLE emp_country PARTITION(ecountry = 'India');
+
+LOAD DATA LOCAL INPATH '/home/cloudera/Dataset/HiveDataset/emp1.txt' 
+INTO TABLE emp_country PARTITION(ecountry = 'USA');
+
+SELECT * from emp_country;
+
+
+
+------------------------------------------- DYNAMIC PARTITIONING ----------------------------------------
+
+set hive.exec.dynamic.partition.mode=nonstrict;
+set hive.exec.dynamic.partition=true;
+
+DROP TABLE IF EXISTS emp_country_dynamic;
+
+CREATE TABLE emp_country_dynamic(eid int , ename string , esal int , ecountry string)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '|'
+STORED AS TEXTFILE;
+
+LOAD DATA LOCAL INPATH '/home/cloudera/Dataset/HiveDataset/emp2.txt' 
+INTO TABLE emp_country_dynamic;
+
+
+CREATE TABLE emp_country_dynamic1(eid int , ename string , esal int)
+PARTITIONED BY (ecountry string)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '|'
+STORED AS TEXTFILE;
+
+
+INSERT INTO TABLE emp_country_dynamic1 PARTITION(ecountry) SELECT * from emp_country_dynamic;
+
+
+------------------------------------------- BUCKETING  -----------------------------------------------
+
+set hive.enforce.bucketing=true;
+
+CREATE TABLE emp_country_buck(eid int , ename string , esal int , ecountry string)
+CLUSTERED BY (eid) into 4 BUCKETS
+row format delimited
+fieldS terminated by '|'
+stored as textfile;
+
+INSERT overwrite table emp_country_buck select * from emp_country_dynamic;
+
+
+
+-----------------------  Joins -----------------------------------------------------
+
+
+CREATE TABLE IF NOT EXISTS CUSTOMERS (cid int, name String, age tinyint, Address String , salary float)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' 
+LINES TERMINATED BY '\n'
+STORED AS TEXTFILE;
+
+CREATE TABLE IF NOT EXISTS ORDERS (oid int, odate timestamp, custid int, amount int)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' 
+LINES TERMINATED BY '\n'
+STORED AS TEXTFILE;
+
+
+LOAD DATA LOCAL INPATH '/home/cloudera/Dataset/HiveDataset/CUSTOMERS.txt' OVERWRITE INTO TABLE CUSTOMERS;
+
+LOAD DATA LOCAL INPATH '/home/cloudera/Dataset/HiveDataset/ORDERS.txt' OVERWRITE INTO TABLE ORDERS;
+
+
+
+Join
+
+SELECT c.cID, c.NAME, c.AGE, o.AMOUNT 
+FROM CUSTOMERS c JOIN ORDERS o 
+ON (c.cID = o.custid);
+
+
+Left outer Join
+SELECT c.cID, c.NAME, o.AMOUNT, o.odate 
+FROM CUSTOMERS c 
+LEFT OUTER JOIN ORDERS o 
+ON (c.cID = o.CUSTID);
+
+Right outer join
+hive> SELECT c.cID, c.NAME, o.AMOUNT, o.odate 
+FROM CUSTOMERS c 
+RIGHT OUTER JOIN ORDERS o 
+ON (c.cID = o.CUSTID); 
+
+Full outer join
+SELECT c.cID, c.NAME, o.AMOUNT, o.oDATE 
+FROM CUSTOMERS c 
+FULL OUTER JOIN ORDERS o 
+ON (c.cID = o.CUSTID);
+
+
+
+----------------------- ORDER BY ---------------------------------------------------
+select  * from emp_country order by esal;
+
+Number of reduce tasks determined at compile time: 1
+
+
+----------------------- SORT BY ---------------------------------------------------
+select  * from emp_country order by esal;
+
+Number of reduce tasks not specified. Estimated from input data size: 1
+
+
+----------------------- DISTRIBUTED BY ---------------------------------------------------
+
+select  * from emp_country order by esal;
+
+Number of reduce tasks not specified. Estimated from input data size: 1
+
+
+
+--------------- Complex Data Type ----------------------------
+
+create table complex_example(id int, name string, salary bigint, sub array<string>, details map<string, int>, address struct<city:string, state:string, pin:int>)
+row format delimited fields terminated by ','
+collection items terminated by '$'
+map keys terminated by '#'
+LINES TERMINATED BY '\n';
+
+
+load data local inpath '/home/cloudera/Dataset/HiveDataset/emp_data.txt' into table complex_example;
+
+--------------------------------- UDF ----------------------------------------------
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------
+DROP DATABASE  hivedatabase CASCADE;
